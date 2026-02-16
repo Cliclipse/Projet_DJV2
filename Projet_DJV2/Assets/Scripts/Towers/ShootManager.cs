@@ -70,6 +70,10 @@ public  class ShootManager : MonoBehaviour
         _projectileDamages = damages;
     }
 
+    public void SetTarget(Transform target)
+    {
+        _target = target;
+    }
 
 
 }

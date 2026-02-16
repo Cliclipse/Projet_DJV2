@@ -86,4 +86,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 3581924066246127634, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}

@@ -40,6 +40,7 @@ public class Projectile : MonoBehaviour
     {
         _mover.Move(_direction);
         _mover.Orienting(_direction, mesh);
+        if (!_targetAlive && transform.position == _target.position) Destroy(gameObject); //Je détruis le projectile quand il arrive où devait être sa cible
 
     }
 

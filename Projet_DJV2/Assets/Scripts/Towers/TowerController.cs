@@ -8,8 +8,7 @@ public class TowerController : MonoBehaviour
     [SerializeField] private TowerData towerData;
     
     private int _cost;
-
-
+    
     private ShootManager _shootManager;
     
     private 

@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrossBowTower
       objectReference: {fileID: 0}
+    - target: {fileID: 4676459513315804202, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7558062833028606933, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

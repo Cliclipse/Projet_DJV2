@@ -4,22 +4,14 @@ using UnityEngine;
 
 public class CrossbowShootManager : ShootManager
 {
-    [SerializeField] private CrossbowBolt projectile;
     
     private void Shoot()
     {
         if (_hasTarget && !_inCooldown)
         {
-            Debug.Log("Projectile Instancié");
-            CrossbowBolt lastBolt = Instantiate(projectile , transform.position , Quaternion.identity);
-            lastBolt.SetSpeed(_projectilSpeed);
-            lastBolt.SetDamage(_projectileDamages);
-            lastBolt.SetDamage(_projectileDamages);
-            lastBolt.SetTarget(_target);
-            
+            SpawnProjectile();
             StartCoroutine(ShootingCooldownCoroutine());
         }
-
     }
     
     

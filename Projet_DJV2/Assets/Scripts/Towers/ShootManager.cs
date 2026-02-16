@@ -9,12 +9,26 @@ public  class ShootManager : MonoBehaviour
     protected float _shotCooldown;
     protected float _projectilSpeed;
     protected float _projectileDamages;
+    protected float _range;
+    
 
     [SerializeField] protected Transform _target; //temporairement en serialize
 
     protected bool _hasTarget ;
     protected bool _inCooldown ;
 
+    [SerializeField] private Projectile projectile;
+
+    
+    protected void SpawnProjectile()
+    {
+        Projectile lastProjectile = Instantiate(projectile , transform.position , Quaternion.identity);
+        lastProjectile.SetSpeed(_projectilSpeed);
+        lastProjectile.SetDamage(_projectileDamages);
+        lastProjectile.SetDamage(_projectileDamages);
+        lastProjectile.SetTarget(_target);
+    }
+    
 
     protected IEnumerator ShootingCooldownCoroutine()
     {
@@ -22,7 +36,7 @@ public  class ShootManager : MonoBehaviour
         yield return new WaitForSeconds(_shotCooldown);
         _inCooldown = false;
     }
-
+    
     
     /*
  je vais avoir un prob c'est que si la tour a un transforme en tant que target
@@ -32,24 +46,21 @@ public  class ShootManager : MonoBehaviour
  */
     protected void TargetSelection()
     {
-        _hasTarget = (_target != null); // à améliorer en prenant en compte la range
-
+        _hasTarget = (_target != null); //je regarde si ma target actuelle est morte ou si j'en ai plus'
+        if (_hasTarget)
+        {
+            if (Vector3.Magnitude(_target.transform.position - transform.position) >
+                _range * _range)// Si l'ennemi est plus dans la range
+            {
+                
+            }
+        }
     }
     
 
     
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     
     
     

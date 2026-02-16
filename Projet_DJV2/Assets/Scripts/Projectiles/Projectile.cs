@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
+
     [SerializeField] private Transform mesh;
     protected Mover _mover;
 
@@ -16,6 +17,10 @@ public class Projectile : MonoBehaviour
     protected Vector3 _direction;
     
     protected bool _targetAlive;
+
+
+
+
 
     protected void Boum()
     {
@@ -46,6 +51,7 @@ public class Projectile : MonoBehaviour
 
     protected void UpdateDirection()
     {
+        CheckTargetStillAlive();
         if (_targetAlive) _direction = (_target.position - transform.position).normalized;
     }
     

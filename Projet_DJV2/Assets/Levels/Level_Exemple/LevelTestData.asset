@@ -15,4 +15,4 @@ MonoBehaviour:
   initialGold: 350
   intialLife: 20
   waves:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a10f2228ae3d0a94f911267d07c38f3c, type: 2}

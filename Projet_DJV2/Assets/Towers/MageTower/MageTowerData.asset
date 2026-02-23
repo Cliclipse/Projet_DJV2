@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b403d31bde864e547a96e2257b3519ff, type: 3}
-  m_Name: CrossBowTowerData
+  m_Name: MageTowerData
   m_EditorClassIdentifier: 
-  cost: 200
+  cost: 300
   projectilsShot: 1
-  shotCooldown: 0.75
+  shotCooldown: 1.25
   projectilSpeed: 10
-  projectileDamages: 10
+  projectileDamages: 7

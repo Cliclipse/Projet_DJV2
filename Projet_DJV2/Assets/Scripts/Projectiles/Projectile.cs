@@ -22,7 +22,7 @@ public abstract class Projectile : MonoBehaviour
 
 
 
-    protected void Boum()
+    protected virtual void Boum()
     {
         if (_targetAlive)
         {

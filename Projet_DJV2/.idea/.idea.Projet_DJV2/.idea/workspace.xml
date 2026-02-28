@@ -6,20 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthCount.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthCount.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InformationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InformationController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShopManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShopManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/FireBallTempo Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/FireBallTempo Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/Fireball Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/Fireball Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +114,7 @@
       <workItem from="1771844750706" duration="22000" />
       <workItem from="1771852974486" duration="8683000" />
       <workItem from="1771867630587" duration="883000" />
-      <workItem from="1772303829617" duration="4405000" />
+      <workItem from="1772303829617" duration="5990000" />
     </task>
     <servers />
   </component>

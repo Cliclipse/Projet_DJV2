@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7657999131954080607, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c21f0308637fdc43ac3a67094be256d, type: 3}
+    - target: {fileID: -7657999131954080607, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3713118632951639257, guid: abbc8002e7ba2b54abea5eae01c7de58, type: 2}
     - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: towerData
       value: 
@@ -85,5 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef77e9ad9c2bc743aaf0e0d10d7a446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  castSound: {fileID: 3524080954292093327}
   _target: {fileID: 0}
   projectile: {fileID: 2785331766886677160, guid: a1e4f8434f76e8f4b9263d151dcdbe32, type: 3}
+--- !u!82 &3524080954292093327 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -7657999131954080607, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+  m_PrefabInstance: {fileID: 2689034536249742638}
+  m_PrefabAsset: {fileID: 0}

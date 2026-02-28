@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7657999131954080607, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 3713118632951639257, guid: abbc8002e7ba2b54abea5eae01c7de58, type: 2}
     - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: towerData
       value: 
@@ -89,5 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944b959e9ddba9a4db2e00d3c5d3d82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  castSound: {fileID: 0}
   _target: {fileID: 0}
   projectile: {fileID: 3581924066246127634, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}

@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Properties;
 using UnityEngine;
 
 public  class ShootManager : MonoBehaviour
 {
+    [SerializeField] protected AudioSource castSound; 
     protected int _projectilsShot;
     protected float _shotCooldown;
     protected float _projectilSpeed;
@@ -19,9 +18,10 @@ public  class ShootManager : MonoBehaviour
 
     [SerializeField] private Projectile projectile;
 
-    
     protected void SpawnProjectile()
     {
+        if (castSound != null) castSound.Play();
+        Debug.Log("là");
         Projectile lastProjectile = Instantiate(projectile , transform.position , Quaternion.identity);
         lastProjectile.SetSpeed(_projectilSpeed);
         lastProjectile.SetDamage(_projectileDamages);

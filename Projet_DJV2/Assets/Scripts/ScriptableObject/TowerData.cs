@@ -9,6 +9,7 @@ public class TowerData : ScriptableObject
     public float projectilSpeed;
     public float projectileDamages;
     
-    
+    public AudioClip castSound;
+
     //Ensuite faut voir comment on renseigne les améliorations, genere en met tout dans une tableau et la case 0 c'est lvl 1 etc ou si on fait un autre truc
 }

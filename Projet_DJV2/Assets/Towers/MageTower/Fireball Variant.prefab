@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 7872423725537186730}
+  soundMaker: {fileID: 7971851440140033032, guid: 9aeea4acc02415e47a4b5695b971e12e, type: 3}
+  audioSource: {fileID: 279394003654710040, guid: c7edafdad1566444389162447ad301e6, type: 3}
 --- !u!4 &7872423725537186730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7026109059720740409, guid: 43940d6f3eff934489f3addd0d962e5e, type: 3}

@@ -28,6 +28,8 @@ public class Fireball : Projectile
 
     protected override void Boum()
     {
+        HitSound();
+        Destroy(gameObject);
         //Implémenter l'overlap de l'aoe
     }
     

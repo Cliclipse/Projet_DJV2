@@ -10,18 +10,22 @@ public class TowerController : MonoBehaviour
     private int _cost;
     
     private ShootManager _shootManager;
+    private AudioSource _audioSource;
+    
     
     private 
     // Start is called before the first frame update
     void Start()
     {
         _shootManager = GetComponent<ShootManager>();
+        _audioSource = GetComponent<AudioSource>();
         
         _shootManager.SetProjectilsShot(towerData.projectilsShot);
         _shootManager.SetProjectileSpeed(towerData.shotCooldown);
         _shootManager.SetProjectileDamages(towerData.projectileDamages);
         _shootManager.SetShotCooldown(towerData.shotCooldown);
-        
+
+        _audioSource.clip = towerData.castSound;
         
         _cost = towerData.cost;
 

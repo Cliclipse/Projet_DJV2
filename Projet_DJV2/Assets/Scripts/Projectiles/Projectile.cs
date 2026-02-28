@@ -6,6 +6,8 @@ public abstract class Projectile : MonoBehaviour
 {
 
     [SerializeField] private Transform mesh;
+    [SerializeField] private SoundMaker soundMaker;
+
     protected Mover _mover;
 
     
@@ -20,7 +22,10 @@ public abstract class Projectile : MonoBehaviour
 
 
 
-
+    protected void HitSound()
+    {
+       Instantiate(soundMaker, transform.position, transform.rotation);
+    }
 
     protected virtual void Boum()
     {
@@ -32,6 +37,8 @@ public abstract class Projectile : MonoBehaviour
         {
             Debug.Log("Boum mais il était déjà mort de toute façon");
         }
+
+        HitSound();
         Destroy(gameObject);
     }
 

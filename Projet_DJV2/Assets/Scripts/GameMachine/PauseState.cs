@@ -12,7 +12,7 @@ public class PauseState : IState
     public void Enter()
     {
         Debug.Log("Entrée Etat pause");
-
+        _levelController.PauseScreen.gameObject.SetActive(true);
         Time.timeScale = 0f;
         _levelController.AddPauseListener(OnPause);
     }
@@ -28,6 +28,8 @@ public class PauseState : IState
     public void Exit()
     {
         Debug.Log("Sortie Etat pause");
+        _levelController.PauseScreen.gameObject.SetActive(false);
+
         _levelController.RemovePauseListener(OnPause);
     }
 

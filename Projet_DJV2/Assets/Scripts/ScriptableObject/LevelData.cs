@@ -9,4 +9,5 @@ public class LevelData : ScriptableObject
     public int initialGold;
     public int intialLife;
     public WaveData[] waves;
+    public AudioClip levelMusic;
 }

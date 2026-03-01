@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -12,8 +15,6 @@ public class LevelController : MonoBehaviour
     //implémenter un singleton ensuite puis le fait que ce soit une machine à état entre l'animation de départ,
     //le menu pause, le jeu avec le shop ouvert ou le shop non ouvert
     [SerializeField] RectTransform shopPanel;
-    [SerializeField] RectTransform PauseMenuPanel;
-    
     [SerializeField] private TowerData[] towerData; // ce serait mieux de faire un dico mais on peut pas le serializeField et chiant à construire avec l'enum donc flemme
     //Dcp order : 0: Crossbow , 1: Mage , 2: Archer 
     
@@ -34,17 +35,16 @@ public class LevelController : MonoBehaviour
     [Header("GameStateMachine")]
     [SerializeField] private Canvas winScreen;
     [SerializeField] private Canvas loseScreen;
+    [SerializeField] private Canvas pauseScreen;
+
     public GameStateMachine GameStateMachine { get; private set; }
     public Canvas WinScreen => winScreen; //Raccourci Getter
     public Canvas LoseScreen => loseScreen;
+    public Canvas PauseScreen => pauseScreen;
+
+    
     private UnityEvent _onPause = new();
 
-
-    void Awake()
-    {
-        GameStateMachine = new GameStateMachine(this);
-        GameStateMachine.Initialize(GameStateMachine.PlayState);
-    }
     
     public void CloseShop()
     {
@@ -61,8 +61,11 @@ public class LevelController : MonoBehaviour
     }
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        GameStateMachine = new GameStateMachine(this);
+        GameStateMachine.Initialize(GameStateMachine.PlayState);
+        
         gold = levelData.initialGold;
         health = levelData.intialLife;
         
@@ -72,6 +75,9 @@ public class LevelController : MonoBehaviour
         
         GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
         _mainCamera = camObj.GetComponent<Camera>();
+        AudioSource backgroundMuisc = camObj.GetComponent<AudioSource>();
+        backgroundMuisc.clip = levelData.levelMusic;
+        backgroundMuisc.Play();
     }
     
     protected void ClickManager()

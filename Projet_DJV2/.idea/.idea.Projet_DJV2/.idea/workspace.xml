@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoltSoundMaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BoltSoundMaker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundMaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundMaker.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +119,8 @@
       <workItem from="1771844750706" duration="22000" />
       <workItem from="1771852974486" duration="8683000" />
       <workItem from="1771867630587" duration="883000" />
-      <workItem from="1772303829617" duration="5990000" />
+      <workItem from="1772303829617" duration="7188000" />
+      <workItem from="1772368629127" duration="144000" />
     </task>
     <servers />
   </component>

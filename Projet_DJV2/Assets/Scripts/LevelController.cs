@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class LevelController : MonoBehaviour
@@ -29,8 +30,21 @@ public class LevelController : MonoBehaviour
     
     private bool _shopState;
     
-
     
+    [Header("GameStateMachine")]
+    [SerializeField] private Canvas winScreen;
+    [SerializeField] private Canvas loseScreen;
+    public GameStateMachine GameStateMachine { get; private set; }
+    public Canvas WinScreen => winScreen; //Raccourci Getter
+    public Canvas LoseScreen => loseScreen;
+    private UnityEvent _onPause = new();
+
+
+    void Awake()
+    {
+        GameStateMachine = new GameStateMachine(this);
+        GameStateMachine.Initialize(GameStateMachine.PlayState);
+    }
     
     public void CloseShop()
     {
@@ -106,7 +120,19 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         ClickManager();
-        
+        GameStateMachine.Update();
+
     }
 
+    
+    //=========GESTION ETAT PAUSE=========
+    //Crée en enlève le listener qui détecte le bouton qui met la fin de la pause
+    public void AddPauseListener(UnityAction listener) => _onPause.AddListener(listener);
+    public void RemovePauseListener(UnityAction listener) => _onPause.RemoveListener(listener);
+
+    public void TogglePause()
+    {
+        _onPause.Invoke();
+    }
+    
 }

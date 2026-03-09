@@ -44,7 +44,6 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 0}
   - {fileID: 11400000, guid: 5dae337eb884a274d91ed90f27ab51ba, type: 2}
   - {fileID: 11400000, guid: a4daa560542a21c4c8237c9cb7d2ccdc, type: 2}
   - {fileID: 11400000, guid: 22dbfc6b195bf3849a9a1cba4b900d64, type: 2}
@@ -90,6 +89,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Towers
+    - Enemy
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 2a882dd5bf483ab4988a905c10d8b681, type: 2}

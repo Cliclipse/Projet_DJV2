@@ -8,6 +8,7 @@ public class TowerData : ScriptableObject
     public float shotCooldown;
     public float projectilSpeed;
     public float projectileDamages;
+    public float range;
     
     public AudioClip castSound;
 

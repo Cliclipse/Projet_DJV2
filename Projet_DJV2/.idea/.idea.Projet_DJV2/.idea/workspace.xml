@@ -5,9 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level_Exemple/LevelTestData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level_Exemple/LevelTestData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyA/EnemyA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyA/EnemyA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Enemies/EnemyBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemies/EnemyBase.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuiltZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuiltZone.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/EnumTower.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/EnumTower.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/GameStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/GameStateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/IState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/IState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/LoseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/LoseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/LoseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/LoseState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PauseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PauseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PauseState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PauseState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PlayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PlayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PlayState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/PlayState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/WinState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/WinState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMachine/WinState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMachine/WinState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthCount.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthCount.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InformationController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InformationController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mover.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/BoltSoundMaker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/BoltSoundMaker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/CrossbowBolt.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/CrossbowBolt.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/MageFireball.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/Projectile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectiles/SoundMaker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectiles/SoundMaker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/LevelData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/LevelData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WaveData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WaveData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShopManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShopManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/CrossbowShootManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/CrossbowShootManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/MageTowerShootManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/MageTowerShootManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTowerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTowerData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossbowBolt Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossbowBolt Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/Fireball Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/Fireball Variant.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +69,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/a3/3d824565/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7f/81e807a1/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/EnumTower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/LevelData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VFX.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -116,6 +166,9 @@
       <workItem from="1771867630587" duration="883000" />
       <workItem from="1772303829617" duration="7188000" />
       <workItem from="1772368627593" duration="10672000" />
+      <workItem from="1773242757394" duration="739000" />
+      <workItem from="1773674206894" duration="16717000" />
+      <workItem from="1773691689414" duration="558000" />
     </task>
     <servers />
   </component>

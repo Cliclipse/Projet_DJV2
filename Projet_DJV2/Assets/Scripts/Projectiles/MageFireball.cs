@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Enemies;
 using UnityEngine;
 
 public class Fireball : Projectile
 {
-    // Start is called before the first frame update
+    [SerializeField] private ParticleSystem _explosion;
+    [SerializeField] private float explosionRange;
     
     void Start()
     {
@@ -26,11 +29,35 @@ public class Fireball : Projectile
     }
 
 
+    //Je peux pas juste hit tous les ennemis car on va trigger plusieurs colliders de chaque ennemi
+
+    private void AOE(Collider[] hits)
+    {
+        GameObject[] alreadyHits = new GameObject[hits.Length];
+        foreach (Collider col in hits)
+        {
+            GameObject go = col.GetComponentInParent<EnemyController>().gameObject;
+            if (!alreadyHits.Contains(go))
+            {
+                go.GetComponent<Health>().TakeDamage(_damage);
+                alreadyHits.Append(go);
+            }
+        }
+        
+    }
     protected override void Boum()
     {
+        //
+        
+        
         HitSound();
+        Instantiate(_explosion , transform.position , Quaternion.identity);
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, explosionRange, LayerMask.GetMask("Enemy"));
+        AOE(hits);
+        
+        
         Destroy(gameObject);
         //Implémenter l'overlap de l'aoe
     }
-    
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1970295510612100668}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 209224627071668248, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 224363245414087471, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
       propertyPath: enemyData
       value: 

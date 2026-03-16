@@ -31,13 +31,9 @@ public abstract class Projectile : MonoBehaviour
     {
         if (_targetAlive)
         {
-            Debug.Log("Boum");
+            Health health = _target.gameObject.GetComponentInParent<Health>();
+            health.TakeDamage(_damage);
         }
-        else
-        {
-            Debug.Log("Boum mais il était déjà mort de toute façon");
-        }
-
         HitSound();
         Destroy(gameObject);
     }
@@ -51,7 +47,7 @@ public abstract class Projectile : MonoBehaviour
     protected void MoveToTarget()
     {
         _mover.Move(_direction);
-        _mover.Orienting(_direction, mesh);
+        //_mover.Orienting(_direction, this); Fais des trucs étranges
         if (!_targetAlive && transform.position == _target.position) Destroy(gameObject); //Je détruis le projectile quand il arrive où devait être sa cible
 
     }

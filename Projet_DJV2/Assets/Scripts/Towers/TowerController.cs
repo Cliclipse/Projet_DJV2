@@ -24,16 +24,13 @@ public class TowerController : MonoBehaviour
         _shootManager.SetProjectileSpeed(towerData.shotCooldown);
         _shootManager.SetProjectileDamages(towerData.projectileDamages);
         _shootManager.SetShotCooldown(towerData.shotCooldown);
-
+        _shootManager.SetRange(towerData.range);
+        
         _audioSource.clip = towerData.castSound;
         
         _cost = towerData.cost;
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

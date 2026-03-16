@@ -7,6 +7,10 @@ public class VFX : MonoBehaviour
     private float _time;
     ParticleSystem _particle;
     
+    
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {

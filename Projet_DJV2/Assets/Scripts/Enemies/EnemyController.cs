@@ -11,6 +11,9 @@ namespace Enemies
             
         private Health _health;
         private Mover _mover;
+        
+        private LevelController _levelController;
+
 
         private void Awake()
         {
@@ -21,6 +24,12 @@ namespace Enemies
             _health.SetMaxHealth(enemyData.maxHealth);
             _health.SetCurrentHealth(enemyData.maxHealth);
 
+            
+            _levelController = FindAnyObjectByType<LevelController>(); 
+            if (_levelController == null)
+            {
+                Debug.Log("No level controller found by the ennemy");
+            }
         }
 
         private void Start()
@@ -30,6 +39,7 @@ namespace Enemies
         private void OnDeath()
         {
             Debug.Log("Ennemi Tué");
+            _levelController.gold += enemyData.reward;
             Destroy(gameObject); //moyen d'override ou de modif si on veut faire des ennemis particuliers du type slime qui se sépare ou jsp
         }
 

@@ -9,6 +9,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class LevelController : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class LevelController : MonoBehaviour
     public Canvas LoseScreen => loseScreen;
     public Canvas PauseScreen => pauseScreen;
 
+    
     
     private UnityEvent _onPause = new();
 
@@ -80,6 +82,18 @@ public class LevelController : MonoBehaviour
         backgroundMuisc.Play();
     }
     
+    private bool IsPointerOverUI()
+    {
+        //En gros le raycaster sur la cam que j'ai mis pour détecter le passage de la souris sur les tours, fait planter
+        //la fonction qui détectait si la souris était au dessus l'ui, donc faut en refaire une.
+        PointerEventData pointerData = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        return results.Exists(r => r.gameObject.layer == LayerMask.NameToLayer("UI"));
+    }
+    
     protected void ClickManager()
     {
         if (Input.GetMouseButtonDown(0))
@@ -90,7 +104,7 @@ public class LevelController : MonoBehaviour
             {
                 Transform clicked = hit.collider.gameObject.transform.parent;
 
-                if (!EventSystem.current.IsPointerOverGameObject())
+                if (!IsPointerOverUI())
                 {
                     if (clicked == null) CloseShop();
                     else if (clicked.TryGetComponent<BuiltZone>(out BuiltZone builtZone))

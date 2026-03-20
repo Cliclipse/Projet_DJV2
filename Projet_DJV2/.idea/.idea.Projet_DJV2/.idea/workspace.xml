@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTowerData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTowerData.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/65/76c7df24/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/a3/3d824565/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7f/81e807a1/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/EnumTower.cs" root0="FORCE_HIGHLIGHTING" />
@@ -124,7 +129,9 @@
       <workItem from="1773691689414" duration="4015000" />
       <workItem from="1773745743965" duration="2655000" />
       <workItem from="1773779166331" duration="7000" />
-      <workItem from="1773993940218" duration="362000" />
+      <workItem from="1773993940218" duration="2115000" />
+      <workItem from="1774012307060" duration="14000" />
+      <workItem from="1774012354846" duration="1819000" />
     </task>
     <servers />
   </component>

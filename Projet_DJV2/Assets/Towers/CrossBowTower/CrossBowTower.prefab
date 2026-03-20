@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: towerData
       value: 
       objectReference: {fileID: 11400000, guid: d805b1b07b589664e83fc6e777b3c3be, type: 2}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: towerDataLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: f08677165710d5e43bc703d56e2388f6, type: 2}
     - target: {fileID: 2934060647841438345, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

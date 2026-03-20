@@ -6,10 +6,14 @@ using UnityEngine.EventSystems;
 //en plus sur la scène spécialement pour ça, clairement pas ouf en terme de pratique
 public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private TowerData towerData;
+    [SerializeField] private TowerDataLevel towerDataLevel;
+    private TowerData towerData;
+
+    
     [SerializeField] private GameObject rangeIndicator;
 
-    private int _cost;
+    private int level;
+
     
     private ShootManager _shootManager;
     private AudioSource _audioSource;
@@ -21,17 +25,39 @@ public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerEx
         _shootManager = GetComponent<ShootManager>();
         _audioSource = GetComponent<AudioSource>();
         
+        level = 1;
+        towerData = towerDataLevel.towerDatas[level];
+
+        StatUpdate();
+        
+        _audioSource.clip = towerData.castSound;
+        
+        rangeIndicator.SetActive(false);
+        
+
+    }
+
+    private void ShooterStatUpdate()
+    {
         _shootManager.SetProjectilsShot(towerData.projectilsShot);
         _shootManager.SetProjectileSpeed(towerData.shotCooldown);
         _shootManager.SetProjectileDamages(towerData.projectileDamages);
         _shootManager.SetShotCooldown(towerData.shotCooldown);
         _shootManager.SetRange(towerData.range);
-        
-        _audioSource.clip = towerData.castSound;
-        
-        _cost = towerData.cost;
-        rangeIndicator.SetActive(false);
+    }
 
+    //Si Je dois mettre à jour d'autre chose avec les données du scriptable
+    private void StatUpdate()
+    {
+        ShooterStatUpdate();
+
+    }
+
+
+    private void LevelUp()
+    {
+        towerData = towerDataLevel.towerDatas[level];
+        level++;
     }
 
     

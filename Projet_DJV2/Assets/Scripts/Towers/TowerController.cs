@@ -57,8 +57,12 @@ public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerEx
     {
         ShooterStatUpdate();
         informationPanel.statsIndicatorsManager.UpdateStats(towerData.projectileDamages  , towerData.shotCooldown , towerData.range);
-        
-        if (_isMaxLevelUp) Destroy(informationPanel.statsLevelUpIndicatorsManager); 
+
+        if (_isMaxLevelUp)
+        {
+            informationPanel.statsLevelUpIndicatorsManager.gameObject.SetActive(false);
+            informationPanel.nextLevelTMP.gameObject.SetActive(false);
+        }
         else informationPanel.statsLevelUpIndicatorsManager.UpdateStats(towerDataLevel.towerDatas[level].projectileDamages , towerDataLevel.towerDatas[level].shotCooldown ,  towerDataLevel.towerDatas[level].range);
         
         informationPanel.levelReference.text = "Level : " + level;

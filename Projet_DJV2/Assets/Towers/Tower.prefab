@@ -604,6 +604,7 @@ MonoBehaviour:
   levelReference: {fileID: 2944107168610643058}
   costLevelUpReference: {fileID: 0}
   statsLevelUpIndicatorsManager: {fileID: 3178563027106135930}
+  nextLevelTMP: {fileID: 8441803534489326446}
 --- !u!1 &4363114792301621121
 GameObject:
   m_ObjectHideFlags: 0

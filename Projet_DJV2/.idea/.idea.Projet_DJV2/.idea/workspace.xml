@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ClipseScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InformationPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InformationPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/ShootManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/CrossBowTower/CrossBowTower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/MageTower/MageTower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +134,7 @@
       <workItem from="1774012307060" duration="14000" />
       <workItem from="1774012354846" duration="3677000" />
       <workItem from="1774040161194" duration="8647000" />
-      <workItem from="1774125004143" duration="5563000" />
+      <workItem from="1774125004143" duration="6898000" />
     </task>
     <servers />
   </component>

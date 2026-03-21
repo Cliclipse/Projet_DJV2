@@ -10,5 +10,6 @@ public class InformationPanel : MonoBehaviour
     
     public StatIndicator costLevelUpReference;
     public StatsIndicatorsManager statsLevelUpIndicatorsManager;
+    public TextMeshProUGUI nextLevelTMP;
     
 }

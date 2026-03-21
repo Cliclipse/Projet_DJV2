@@ -25,7 +25,6 @@ public  class ShootManager : MonoBehaviour
         Projectile lastProjectile = Instantiate(projectile , transform.position , Quaternion.identity);
         lastProjectile.SetSpeed(_projectilSpeed);
         lastProjectile.SetDamage(_projectileDamages);
-        lastProjectile.SetDamage(_projectileDamages);
         lastProjectile.SetTarget(_target);
     }
     

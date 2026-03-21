@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: towerDataLevel
       value: 
       objectReference: {fileID: 11400000, guid: 60f63214a310df64b845d0762b4a80e5, type: 2}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: statsIndicatorsManager
+      value: 
+      objectReference: {fileID: 2627495422293844443}
     - target: {fileID: 2934060647841438345, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64,6 +68,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3714184413150782736, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714184413150782736, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4363114792301621121, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_Name
       value: MageTower
@@ -72,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 79314fb4b91c18848a624c1e2335348f, type: 2}
+    - target: {fileID: 8635370493376830505, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: m_text
+      value: Mage Tower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -100,6 +116,17 @@ MonoBehaviour:
   castSound: {fileID: 3524080954292093327}
   _target: {fileID: 0}
   projectile: {fileID: 2785331766886677160, guid: a1e4f8434f76e8f4b9263d151dcdbe32, type: 3}
+--- !u!114 &2627495422293844443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 83285273116833013, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+  m_PrefabInstance: {fileID: 2689034536249742638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f501da1a2aff044da40f97d44b446d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &3524080954292093327 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: -7657999131954080607, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}

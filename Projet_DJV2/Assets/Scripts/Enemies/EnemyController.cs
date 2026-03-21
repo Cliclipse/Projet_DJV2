@@ -38,8 +38,6 @@ namespace Enemies
         }
         private void OnDeath()
         {
-            Debug.Log("Ennemi Tué");
-            Debug.Log(enemyData.reward);
             if (_levelController != null) _levelController.gold += enemyData.reward;
             Destroy(gameObject); //moyen d'override ou de modif si on veut faire des ennemis particuliers du type slime qui se sépare ou jsp
         }

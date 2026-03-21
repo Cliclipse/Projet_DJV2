@@ -7,40 +7,46 @@ using UnityEngine.EventSystems;
 public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private TowerDataLevel towerDataLevel;
-    private TowerData towerData;
-
-    
+    [SerializeField] private InformationPanel informationPanel;
     [SerializeField] private GameObject rangeIndicator;
 
+    private TowerData towerData;
     private int level;
+
+    private LevelController levelController;
+
 
     
     private ShootManager _shootManager;
     private AudioSource _audioSource;
     
     
+    private bool _isSelected = false; //Mini machine à 2 états
+    private bool _isMaxLevelUp = false;
+    
     // Start is called before the first frame update
     void Start()
     {
+        levelController = FindFirstObjectByType<LevelController>();
         _shootManager = GetComponent<ShootManager>();
         _audioSource = GetComponent<AudioSource>();
         
         level = 1;
-        towerData = towerDataLevel.towerDatas[level];
+        towerData = towerDataLevel.towerDatas[0];
 
         StatUpdate();
         
         _audioSource.clip = towerData.castSound;
         
-        rangeIndicator.SetActive(false);
         
-
+        rangeIndicator.SetActive(false);
+        informationPanel.gameObject.SetActive(false);
     }
 
     private void ShooterStatUpdate()
     {
         _shootManager.SetProjectilsShot(towerData.projectilsShot);
-        _shootManager.SetProjectileSpeed(towerData.shotCooldown);
+        _shootManager.SetProjectileSpeed(towerData.projectilSpeed);
         _shootManager.SetProjectileDamages(towerData.projectileDamages);
         _shootManager.SetShotCooldown(towerData.shotCooldown);
         _shootManager.SetRange(towerData.range);
@@ -50,26 +56,65 @@ public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerEx
     private void StatUpdate()
     {
         ShooterStatUpdate();
-
+        informationPanel.statsIndicatorsManager.UpdateStats(towerData.projectileDamages  , towerData.shotCooldown , towerData.range);
+        
+        if (_isMaxLevelUp) Destroy(informationPanel.statsLevelUpIndicatorsManager); 
+        else informationPanel.statsLevelUpIndicatorsManager.UpdateStats(towerDataLevel.towerDatas[level].projectileDamages , towerDataLevel.towerDatas[level].shotCooldown ,  towerDataLevel.towerDatas[level].range);
+        
+        informationPanel.levelReference.text = "Level : " + level;
+        
+        //informationPanel.costLevelUpReference.stat = towerData.cost;
     }
 
 
     private void LevelUp()
     {
-        towerData = towerDataLevel.towerDatas[level];
+        towerData = towerDataLevel.towerDatas[level]; //On prend tjr à -1 du level donc prendre level permet de prendre le suivant
         level++;
+        if (level == towerDataLevel.towerDatas.Length) _isMaxLevelUp = true;
+        StatUpdate();
+    }
+
+    private void VerifLevelUp()
+    {
+        int cost = towerDataLevel.towerDatas[level].cost; //Meme sans le +1 ca va chercher le coup de la tour d'après
+        if (levelController == null) //Si pas de levelController j'assume que c'est une scène de test qui vérif pas les gold
+        {
+            Debug.Log("Pas de level controller j'assume que c'est une scène de test. Amélioration sans coût");
+            LevelUp();
+        }
+        else if (levelController.gold >= cost)
+        {
+            levelController.gold -= towerDataLevel.towerDatas[level + 1].cost;
+            LevelUp();
+
+            Debug.Log("LevelUp de la tour");
+        }
+        else
+        {
+            Debug.Log("Trop pauvre");
+        }
     }
 
     
     public void OnPointerEnter(PointerEventData eventData){
-        Debug.Log("OnMouseEnter");
+        _isSelected = true;
         rangeIndicator.transform.localScale = Vector3.one * towerData.range * 2;
+        informationPanel.gameObject.SetActive(true);
         rangeIndicator.SetActive(true);
+        // ajouter un event d'update et quand je suis activé je mets un listener sur le fait que cette touche soit pressé dans le level controller, et j'upgrade si c'est le cas
     }
 
     public void OnPointerExit(PointerEventData eventData){
-        Debug.Log("OnMouseExit");
+        _isSelected = false;
         rangeIndicator.SetActive(false);
+        informationPanel.gameObject.SetActive(false);
+
+    }
+
+    void Update()
+    {
+        if (_isSelected && Input.GetKeyDown(KeyCode.Space) && !_isMaxLevelUp) VerifLevelUp();
     }
 
 }

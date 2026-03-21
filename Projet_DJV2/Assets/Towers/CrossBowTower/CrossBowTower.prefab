@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: towerDataLevel
       value: 
       objectReference: {fileID: 11400000, guid: f08677165710d5e43bc703d56e2388f6, type: 2}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: statsIndicatorsManager
+      value: 
+      objectReference: {fileID: 8684299997586565097}
     - target: {fileID: 2934060647841438345, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -100,3 +104,14 @@ MonoBehaviour:
   castSound: {fileID: 0}
   _target: {fileID: 0}
   projectile: {fileID: 3581924066246127634, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}
+--- !u!114 &8684299997586565097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 83285273116833013, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+  m_PrefabInstance: {fileID: 8764910140692681500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f501da1a2aff044da40f97d44b446d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

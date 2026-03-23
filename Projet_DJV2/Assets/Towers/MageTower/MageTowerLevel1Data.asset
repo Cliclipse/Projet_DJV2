@@ -15,7 +15,7 @@ MonoBehaviour:
   cost: 300
   projectilsShot: 1
   shotCooldown: 1.25
-  projectilSpeed: 10
+  projectilSpeed: 1
   projectileDamages: 7
   range: 10
   castSound: {fileID: 8300000, guid: 2c21f0308637fdc43ac3a67094be256d, type: 3}

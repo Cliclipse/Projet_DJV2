@@ -22,4 +22,4 @@ MonoBehaviour:
   slowTime: 3
   slowSpeed: 0.6
   poisonTime: 4
-  poisonDamages: 6
+  poisonDamages: 4

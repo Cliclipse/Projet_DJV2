@@ -57,17 +57,26 @@ public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerEx
     {
         ShooterStatUpdate();
         informationPanel.statsIndicatorsManager.UpdateStats(towerData.projectileDamages  , towerData.shotCooldown , towerData.range);
-
+        
         if (_isMaxLevelUp)
         {
             informationPanel.statsLevelUpIndicatorsManager.gameObject.SetActive(false);
             informationPanel.nextLevelTMP.gameObject.SetActive(false);
+            informationPanel.costLevelUpReference.gameObject.SetActive(false);
         }
-        else informationPanel.statsLevelUpIndicatorsManager.UpdateStats(towerDataLevel.towerDatas[level].projectileDamages , towerDataLevel.towerDatas[level].shotCooldown ,  towerDataLevel.towerDatas[level].range);
+        else
+        {
+            informationPanel.statsLevelUpIndicatorsManager.UpdateStats(towerDataLevel.towerDatas[level].projectileDamages , towerDataLevel.towerDatas[level].shotCooldown ,  towerDataLevel.towerDatas[level].range);
+            informationPanel.costLevelUpReference.stat = towerData.cost ;
+        }
         
-        informationPanel.levelReference.text = "Level : " + level;
-        
-        //informationPanel.costLevelUpReference.stat = towerData.cost;
+        informationPanel.levelReference.text = "Level : " + level; 
+        informationPanel.costLevelUpReference.stat = towerData.cost;
+
+        if (towerData.hasEffect = true)
+        {
+            informationPanel.effectPanel.gameObject.SetActive(true);
+        }
     }
 
 

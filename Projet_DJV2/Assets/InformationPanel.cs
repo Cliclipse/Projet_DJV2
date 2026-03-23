@@ -11,5 +11,12 @@ public class InformationPanel : MonoBehaviour
     public StatIndicator costLevelUpReference;
     public StatsIndicatorsManager statsLevelUpIndicatorsManager;
     public TextMeshProUGUI nextLevelTMP;
-    
+
+    public RectTransform effectPanel;
+
+    void Start()
+    {
+        if (effectPanel != null) effectPanel.gameObject.SetActive(false);
+    }
+
 }

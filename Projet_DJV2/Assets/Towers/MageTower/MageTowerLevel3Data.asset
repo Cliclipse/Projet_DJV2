@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b403d31bde864e547a96e2257b3519ff, type: 3}
   m_Name: MageTowerLevel3Data
   m_EditorClassIdentifier: 
+  level: 3
   cost: 600
   projectilsShot: 1
   shotCooldown: 1.15
   projectilSpeed: 1
   projectileDamages: 15
   range: 11
+  hasEffect: 0
   castSound: {fileID: 8300000, guid: 2c21f0308637fdc43ac3a67094be256d, type: 3}

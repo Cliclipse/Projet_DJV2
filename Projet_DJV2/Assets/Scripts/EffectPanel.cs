@@ -4,5 +4,18 @@ using UnityEngine;
 
 public class EffectPanel : MonoBehaviour
 {
-    [SerializeField] private EffectUI[] effectUI;
+    [SerializeField] protected EffectUI[] effectUI;
+
+    public virtual void UpdadeEffects(TowerData towerData)
+    {
+        Debug.Log("Effect Panel Update Parent");
+    }
+
+    void Start()
+    {
+        foreach (EffectUI effect in effectUI)
+        {
+            effect.gameObject.SetActive(false);
+        }
+    }
 }

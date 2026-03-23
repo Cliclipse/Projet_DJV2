@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b403d31bde864e547a96e2257b3519ff, type: 3}
   m_Name: CrossBowTowerData
   m_EditorClassIdentifier: 
+  level: 1
   cost: 200
   projectilsShot: 1
   shotCooldown: 0.75
   projectilSpeed: 1.2
   projectileDamages: 10
   range: 15
+  hasEffect: 0
   castSound: {fileID: 0}

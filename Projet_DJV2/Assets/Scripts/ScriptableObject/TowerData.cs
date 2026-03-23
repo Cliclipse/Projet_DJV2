@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TowerData" , menuName = "ScriptableObjet/TowerData" , order = 1)]
 public class TowerData : ScriptableObject
 {
+    public int level;
+    
     public int cost;
     public int projectilsShot;
     public float shotCooldown;

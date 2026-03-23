@@ -7,15 +7,11 @@
     <list default="true" id="4230fa7a-5c01-4a4f-b41e-0e770ac5c640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet_DJV2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InformationPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InformationPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BowTowerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/BowTowerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EffectPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EffectPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/TowerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Towers/TowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTowerLevel4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTowerLevel4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/StatsIndicator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/StatsIndicator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Towers/Tower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual/Common/Font/Ancient Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual/Common/Font/Ancient Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTower.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Towers/BowTower/BowTower.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +24,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/65/76c7df24/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/a3/3d824565/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0b78209fd00d4f419f30dd210cbab239176600/a9/d2cb0c04/RectTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7f/81e807a1/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EffectUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InformationPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BowEffectPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/EnumTower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mover.cs" root0="FORCE_HIGHLIGHTING" />
@@ -144,7 +142,7 @@
       <workItem from="1774040161194" duration="8647000" />
       <workItem from="1774125004143" duration="6898000" />
       <workItem from="1774272659207" duration="7197000" />
-      <workItem from="1774297285485" duration="2900000" />
+      <workItem from="1774297285485" duration="5701000" />
     </task>
     <servers />
   </component>

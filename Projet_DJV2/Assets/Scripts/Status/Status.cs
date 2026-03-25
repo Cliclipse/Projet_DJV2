@@ -12,7 +12,7 @@ public class Status : MonoBehaviour
     }
     
     
-    protected IEnumerator DestructionCooldown()
+    protected virtual IEnumerator DestructionCooldown()
     {
         yield return new WaitForSeconds(duration);
         Destroy(gameObject);

@@ -56,8 +56,8 @@ public class TowerController : MonoBehaviour ,  IPointerEnterHandler, IPointerEx
     private void StatUpdate()
     {
         ShooterStatUpdate();
-        informationPanel.UpdateData(towerData , towerDataLevel.towerDatas[level] , _isMaxLevelUp);
-
+        if (_isMaxLevelUp) informationPanel.UpdateData(towerData , null , _isMaxLevelUp);
+        else informationPanel.UpdateData(towerData ,  towerDataLevel.towerDatas[level] , _isMaxLevelUp);
     }
 
 

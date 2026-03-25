@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0910421545113943aeb52560ee29119, type: 3}
-  m_Name: BowTowerLevel3
+  m_Name: BowTowerLevel5
   m_EditorClassIdentifier: 
-  level: 3
-  cost: 500
+  level: 5
+  cost: 775
   projectilsShot: 1
-  shotCooldown: 1.5
+  shotCooldown: 1.2
   projectilSpeed: 1.6
-  projectileDamages: 16
-  range: 28
+  projectileDamages: 19
+  range: 30
   hasEffect: 1
   castSound: {fileID: 0}
   HasSlow: 1
-  slowTime: 2
-  slowSpeed: 0.7
+  slowTime: 4.5
+  slowSpeed: 0.4
   hasPoison: 1
-  poisonTime: 3
-  poisonDamages: 2
+  poisonTime: 5
+  poisonDamages: 6

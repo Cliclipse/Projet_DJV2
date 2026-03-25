@@ -9,21 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0910421545113943aeb52560ee29119, type: 3}
-  m_Name: BowTowerLevel3
+  m_Script: {fileID: 11500000, guid: b403d31bde864e547a96e2257b3519ff, type: 3}
+  m_Name: CrossBowTowerLevel4Data
   m_EditorClassIdentifier: 
   level: 3
-  cost: 500
+  cost: 400
   projectilsShot: 1
-  shotCooldown: 1.5
-  projectilSpeed: 1.6
-  projectileDamages: 16
-  range: 28
-  hasEffect: 1
+  shotCooldown: 0.65
+  projectilSpeed: 1.2
+  projectileDamages: 20
+  range: 18
+  hasEffect: 0
   castSound: {fileID: 0}
-  HasSlow: 1
-  slowTime: 2
-  slowSpeed: 0.7
-  hasPoison: 1
-  poisonTime: 3
-  poisonDamages: 2

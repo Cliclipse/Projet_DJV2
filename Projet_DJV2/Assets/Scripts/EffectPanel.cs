@@ -8,9 +8,8 @@ public class EffectPanel : MonoBehaviour
 
     public virtual void UpdadeEffects(TowerData towerData)
     {
-        Debug.Log("Effect Panel Update Parent");
+        Debug.Log("méthode update effect parent appelé par" + towerData.name );
     }
-
     void Start()
     {
         foreach (EffectUI effect in effectUI)

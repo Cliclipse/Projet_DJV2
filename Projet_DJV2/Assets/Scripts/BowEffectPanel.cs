@@ -10,14 +10,17 @@ public class BowEffectPanel : EffectPanel
         {
             if (bowTowerData.HasSlow)
             {
-                effectUI[0].gameObject.SetActive(true);
                 Debug.Log("mise à jour des stats d'effet slow");
-                //effectUI[0].statIndicators = new []{bowTowerData.slowTime , bowTowerData.slowSpeed}
+                effectUI[0].gameObject.SetActive(true);
+                effectUI[0].statIndicators[0].stat = bowTowerData.slowTime;
+                effectUI[0].statIndicators[1].stat = bowTowerData.slowSpeed;
             }
             if (bowTowerData.hasPoison)
             {
                 Debug.Log("mise à jour des stats d'effet poison");
                 effectUI[1].gameObject.SetActive(true);
+                effectUI[1].statIndicators[0].stat = bowTowerData.poisonTime;
+                effectUI[1].statIndicators[1].stat = bowTowerData.poisonDamages;
             }
         }
         else

@@ -39,7 +39,7 @@ public class InformationPanel : MonoBehaviour
         levelReference.text = "Level : " + towerData.level; 
         costLevelUpReference.stat = towerData.cost;
 
-        if (towerData.hasEffect = true)
+        if (towerData.hasEffect)
         {
             effectPanel.gameObject.SetActive(true);
             effectPanel.UpdadeEffects(towerData); //Strategy ici

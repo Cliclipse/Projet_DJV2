@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemies;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -12,12 +13,14 @@ public class Level : MonoBehaviour
     
     private EnemyController[] _enemies;
 
-    private void StartWave()
+    private IEnumerator StartWave()
     {
         for (int i = 0; i < 2; i++)
         {
             var enemyPrefab = _enemies[Random.Range(0, _enemies.Length)];
             var enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
+            enemy.Target = pathPoints[0];
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -26,6 +29,17 @@ public class Level : MonoBehaviour
         var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Enemy", null);
         yield return loadHandle;
         _enemies = loadHandle.Result.Select(go => go.GetComponent<EnemyController>()).ToArray();
-        StartWave();
+        StartCoroutine(StartWave());
+    }
+
+    public Transform GetNextPathPoint([CanBeNull] Transform target)
+    {
+        if (target)
+        {
+            int index = System.Array.IndexOf(pathPoints, target);
+            return pathPoints[index + 1];
+        }
+
+        return pathPoints[0];
     }
 }

@@ -7,13 +7,17 @@ namespace Enemies
     public class EnemyController : MonoBehaviour
     {
         [SerializeField] private EnemyData enemyData;
-        public Transform target;
-            
+        
+        private Transform _target;
         private Health _health;
         private Mover _mover;
-        
         private LevelController _levelController;
 
+        public Transform Target
+        {
+            get => _target;
+            set => _target = value;
+        }
 
         private void Awake()
         {
@@ -23,7 +27,6 @@ namespace Enemies
             
             _health.SetMaxHealth(enemyData.maxHealth);
             _health.SetCurrentHealth(enemyData.maxHealth);
-
             
             _levelController = FindAnyObjectByType<LevelController>(); 
             if (_levelController == null)
@@ -42,6 +45,12 @@ namespace Enemies
             Destroy(gameObject); //moyen d'override ou de modif si on veut faire des ennemis particuliers du type slime qui se sépare ou jsp
         }
 
-
+        private void FixedUpdate()
+        {
+            if (_target)
+            {
+                _mover.Target(_target.position);
+            }
+        }
     }
 }

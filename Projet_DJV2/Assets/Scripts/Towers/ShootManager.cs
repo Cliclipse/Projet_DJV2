@@ -83,7 +83,7 @@ public  class ShootManager : MonoBehaviour
             { 
                 Debug.Log("Problème dans la scène, l'objet suivant" + hit.gameObject.name+ " est sur le layer ennemy sans posséder d'EnnemyController dans ses parents");
             }
-            Transform target = ec.target;
+            Transform target = ec.Target;
             float magn =  Vector3.Magnitude(target.transform.position - transform.position);
             if (magn < minMagn)
             {

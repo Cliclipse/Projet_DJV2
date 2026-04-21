@@ -1,43 +1,44 @@
 using Level;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class LoseState : IState
+namespace GameMachine
 {
-    private readonly LevelController _levelController;
-
-    public LoseState(LevelController levelController)
+    public class LoseState : IState
     {
-        _levelController = levelController;
-        //_levelController.LoseScreen.GetComponentInChildren<Button>().onClick.AddListener(OnRetry);
-    }
+        private readonly LevelController _levelController;
 
-    public void Enter()
-    {
-        Time.timeScale = 0;
-        _levelController.LoseScreen.gameObject.SetActive(true);
-    }
+        public LoseState(LevelController levelController)
+        {
+            _levelController = levelController;
+            //_levelController.LoseScreen.GetComponentInChildren<Button>().onClick.AddListener(OnRetry);
+        }
 
-    public void Execute()
-    {
-        Debug.Log("Entrée Etat Defaite");
-        // per-frame logic, include condition to transition to a new state
-    }
+        public void Enter()
+        {
+            Time.timeScale = 0;
+            _levelController.LoseScreen.gameObject.SetActive(true);
+        }
 
-    public void Exit()
-    {
-        Debug.Log("Sortie Etat Defaite");
-        Time.timeScale = 1;
+        public void Execute()
+        {
+            Debug.Log("Entrée Etat Defaite");
+            // per-frame logic, include condition to transition to a new state
+        }
 
-        //_levelController.LoseScreen.gameObject.SetActive(false);
-        //SceneManager.LoadScene(1);
-    }
+        public void Exit()
+        {
+            Debug.Log("Sortie Etat Defaite");
+            Time.timeScale = 1;
 
-    private void OnRetry()
-    {
-        Debug.Log("Retry");
+            //_levelController.LoseScreen.gameObject.SetActive(false);
+            //SceneManager.LoadScene(1);
+        }
+
+        private void OnRetry()
+        {
+            Debug.Log("Retry");
         
-        //_levelController.GameStateMachine.TransitionTo(_levelController.GameStateMachine.PlayState);
+            //_levelController.GameStateMachine.TransitionTo(_levelController.GameStateMachine.PlayState);
+        }
     }
 }

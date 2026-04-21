@@ -1,27 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CrossbowBolt : Projectile
+namespace Projectiles
 {
-    // Start is called before the first frame update
+    public class CrossbowBolt : Projectile
+    {
+        // Start is called before the first frame update
     
-    void Start()
-    {
-        _mover = GetComponent<Mover>();
-        _mover.SetSpeed(_speed);
+        void Start()
+        {
+            _mover = GetComponent<Mover>();
+            _mover.SetSpeed(_speed);
 
-        _targetAlive = true;
-    }
+            _targetAlive = true;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateDirection();
-        MoveToTarget();
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy")) Boum();
+        // Update is called once per frame
+        void Update()
+        {
+            UpdateDirection();
+            MoveToTarget();
+        }
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Enemy")) Boum();
+        }
     }
 }

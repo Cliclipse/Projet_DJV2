@@ -1,31 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class MageTowerShootManager : ShootManager
+namespace Towers
 {
-
-    private void Shoot()
+    public class MageTowerShootManager : ShootManager
     {
-        if (_hasTarget && !_inCooldown)
+
+        private void Shoot()
         {
-            SpawnProjectile();
-            StartCoroutine(ShootingCooldownCoroutine());
+            if (_hasTarget && !_inCooldown)
+            {
+                SpawnProjectile();
+                StartCoroutine(ShootingCooldownCoroutine());
+            }
         }
-    }
     
     
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        _inCooldown = false;
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            _inCooldown = false;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        TargetSelection();
-        Shoot();
+        // Update is called once per frame
+        void Update()
+        {
+            TargetSelection();
+            Shoot();
+        }
     }
 }

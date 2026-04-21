@@ -1,31 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+using ScriptableObjects;
 using UnityEngine;
 
-public class BowEffectPanel : EffectPanel
+namespace Towers.EffectPanel
 {
-    public override void UpdadeEffects(TowerData towerData)
+    public class BowEffectPanel : EffectPanel
     {
-        if (towerData is BowTowerData bowTowerData)
+        public override void UpdadeEffects(TowerData towerData)
         {
-            if (bowTowerData.HasSlow)
+            if (towerData is BowTowerData bowTowerData)
             {
-                Debug.Log("mise à jour des stats d'effet slow");
-                effectUI[0].gameObject.SetActive(true);
-                effectUI[0].statIndicators[0].stat = bowTowerData.slowTime;
-                effectUI[0].statIndicators[1].stat = bowTowerData.slowSpeed;
+                if (bowTowerData.HasSlow)
+                {
+                    Debug.Log("mise à jour des stats d'effet slow");
+                    effectUI[0].gameObject.SetActive(true);
+                    effectUI[0].statIndicators[0].stat = bowTowerData.slowTime;
+                    effectUI[0].statIndicators[1].stat = bowTowerData.slowSpeed;
+                }
+                if (bowTowerData.hasPoison)
+                {
+                    Debug.Log("mise à jour des stats d'effet poison");
+                    effectUI[1].gameObject.SetActive(true);
+                    effectUI[1].statIndicators[0].stat = bowTowerData.poisonTime;
+                    effectUI[1].statIndicators[1].stat = bowTowerData.poisonDamages;
+                }
             }
-            if (bowTowerData.hasPoison)
+            else
             {
-                Debug.Log("mise à jour des stats d'effet poison");
-                effectUI[1].gameObject.SetActive(true);
-                effectUI[1].statIndicators[0].stat = bowTowerData.poisonTime;
-                effectUI[1].statIndicators[1].stat = bowTowerData.poisonDamages;
+                Debug.Log("Le tower Data affecté à la tour Bow nest aps un BowTowerData");
             }
-        }
-        else
-        {
-            Debug.Log("Le tower Data affecté à la tour Bow nest aps un BowTowerData");
         }
     }
 }

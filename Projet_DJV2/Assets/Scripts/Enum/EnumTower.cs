@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnumTower : MonoBehaviour
+namespace Enum
 {
-    public enum Tower
+    public class EnumTower : MonoBehaviour
     {
-        Crossbow,
-        Mage,
-        Archer
+        public enum Tower
+        {
+            Crossbow,
+            Mage,
+            Archer
+        }
     }
 }

@@ -1,6 +1,9 @@
-public interface IState
+namespace GameMachine
 {
-    public void Enter();
-    public void Execute();
-    public void Exit();
+    public interface IState
+    {
+        public void Enter();
+        public void Execute();
+        public void Exit();
+    }
 }

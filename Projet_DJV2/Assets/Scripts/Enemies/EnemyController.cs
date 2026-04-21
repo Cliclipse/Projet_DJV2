@@ -1,5 +1,5 @@
-using System;
 using Level;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace Enemies

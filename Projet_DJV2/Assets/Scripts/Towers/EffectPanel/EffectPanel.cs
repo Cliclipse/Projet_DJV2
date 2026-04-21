@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using ScriptableObjects;
 using UnityEngine;
 
-public class EffectPanel : MonoBehaviour
+namespace Towers.EffectPanel
 {
-    [SerializeField] protected EffectUI[] effectUI;
+    public class EffectPanel : MonoBehaviour
+    {
+        [SerializeField] protected EffectUI[] effectUI;
 
-    public virtual void UpdadeEffects(TowerData towerData)
-    {
-        Debug.Log("méthode update effect parent appelé par" + towerData.name );
-    }
-    void Start()
-    {
-        foreach (EffectUI effect in effectUI)
+        public virtual void UpdadeEffects(TowerData towerData)
         {
-            effect.gameObject.SetActive(false);
+            Debug.Log("méthode update effect parent appelé par" + towerData.name );
+        }
+        void Start()
+        {
+            foreach (EffectUI effect in effectUI)
+            {
+                effect.gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Linq;
 using Enemies;
 using JetBrains.Annotations;
+using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace Level
 {

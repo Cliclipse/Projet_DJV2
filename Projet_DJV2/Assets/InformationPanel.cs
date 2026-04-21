@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects;
 using TMPro;
+using Towers.EffectPanel;
 using UnityEngine;
 
 public class InformationPanel : MonoBehaviour

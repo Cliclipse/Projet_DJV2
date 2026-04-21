@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 96c5058c228601f46b3add0c55dc3beb
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 0a9678f7857550a3fbbac8ac6ef4c186
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -90,6 +90,7 @@ MonoBehaviour:
     - default
     - Towers
     - Enemy
+    - Level
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 2a882dd5bf483ab4988a905c10d8b681, type: 2}

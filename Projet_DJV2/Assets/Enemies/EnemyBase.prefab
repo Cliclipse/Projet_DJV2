@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 0}
-  target: {fileID: 209224627071668248}
 --- !u!195 &7973059970653576506
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -172,7 +171,6 @@ GameObject:
   - component: {fileID: 8804675558212741965}
   - component: {fileID: 5338784329027703235}
   - component: {fileID: 5888965930770930153}
-  - component: {fileID: 7962004659755056456}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Enemy
@@ -245,24 +243,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7962004659755056456
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7384128890841798417}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

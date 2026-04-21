@@ -1,4 +1,5 @@
 using System;
+using Level;
 using UnityEngine;
 
 namespace Enemies
@@ -39,18 +40,21 @@ namespace Enemies
         {
             _health.AddDeathListener(OnDeath);
         }
+        
         private void OnDeath()
         {
             if (_levelController != null) _levelController.gold += enemyData.reward;
             Destroy(gameObject); //moyen d'override ou de modif si on veut faire des ennemis particuliers du type slime qui se sépare ou jsp
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            if (_target)
+            if (!_target || Vector3.Distance(_target.position, transform.position) <= 0.1f)
             {
-                _mover.Target(_target.position);
+                _target = _levelController.GetNextPathPoint(_target);
             }
+            
+            _mover.Target(_target.position);
         }
     }
 }

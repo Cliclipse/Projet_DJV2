@@ -13,6 +13,10 @@ public class Mover : MonoBehaviour
     private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
+        if (_agent)
+        {
+            _agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
+        }
     }
 
     public void SetSpeed(float speed)

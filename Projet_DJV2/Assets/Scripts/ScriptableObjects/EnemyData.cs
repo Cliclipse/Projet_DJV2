@@ -10,6 +10,7 @@ namespace ScriptableObjects
         public int maxHealth;
         public float speed;
         public int reward;
+        public int damages;
     }
 }
 

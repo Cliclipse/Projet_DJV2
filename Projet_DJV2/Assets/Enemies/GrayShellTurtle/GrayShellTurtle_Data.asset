@@ -17,3 +17,4 @@ MonoBehaviour:
   maxHealth: 100
   speed: 5
   reward: 15
+  damages: 5

@@ -92,5 +92,21 @@ namespace Level
             }
             return enemies.ToArray();
         }
+
+        /// <summary>
+        /// Le point de la route est-il le dernier ?
+        /// </summary>
+        /// <param name="pathPoint">Point actuel</param>
+        /// <returns>Le point est le dernier</returns>
+        public bool IsLastPathPoint([CanBeNull] Transform pathPoint)
+        {
+            if (pathPoint)
+            {
+                int index = Array.IndexOf(pathPoints, pathPoint);
+                return index == pathPoints.Length - 1;
+            }
+
+            return false;
+        }
     }
 }

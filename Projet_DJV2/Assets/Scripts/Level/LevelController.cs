@@ -199,7 +199,9 @@ namespace Level
             EnemyController[] ennemies = level.GetEnnemiesOfWave(0);
             foreach (var enemyPrefab in ennemies)
             {
-                var enemy = Instantiate(enemyPrefab, level.SpawnPoint.position, Quaternion.identity, level.SpawnPoint);
+                EnemyController enemy = Instantiate(enemyPrefab, level.SpawnPoint.position, Quaternion.identity, level.SpawnPoint);
+                enemy.AddOnDeathListener(HandleEnemyDeath);
+                enemy.AddOnReachCastleListener(HandleEnemyReachCastle);
                 enemy.Target = level.GetNextPathPoint(null);
                 yield return new WaitForSeconds(1f);
             }
@@ -218,6 +220,26 @@ namespace Level
         public Transform GetNextPathPoint([CanBeNull] Transform pathPoint)
         {
             return level.GetNextPathPoint(pathPoint);
+        }
+
+        /// <summary>
+        /// Le point de la route est-il le dernier ?
+        /// </summary>
+        /// <param name="pathPoint">Point actuel</param>
+        /// <returns>Le point est le dernier</returns>
+        public bool IsLastPathPoint([CanBeNull] Transform pathPoint)
+        {
+            return level.IsLastPathPoint(pathPoint);
+        }
+        
+        private void HandleEnemyDeath(EnemyController enemy)
+        {
+            gold += enemy.EnemyData.reward;
+        }
+
+        private void HandleEnemyReachCastle(EnemyController enemy)
+        {
+            health -= enemy.EnemyData.damages;
         }
     
         //=========GESTION ETAT PAUSE=========

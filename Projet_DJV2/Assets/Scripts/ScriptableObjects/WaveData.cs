@@ -1,3 +1,4 @@
+using Enemies;
 using UnityEngine;
 
 namespace ScriptableObjects
@@ -6,8 +7,6 @@ namespace ScriptableObjects
 
     public class WaveData : ScriptableObject
     {
-        //POur le moment j'ai pas réfléchis à comment
-        //on l'inscrit mais le but c'est d'utiliser un criptable
-        //pour chaque vague et on fait une liste de scriptable
+        public EnemyController[] enemies;
     }
 }

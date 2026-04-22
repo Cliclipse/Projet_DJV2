@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc4385e096652b44b452d2a478043fa, type: 3}
-  m_Name: Level1_Data
+  m_Script: {fileID: 11500000, guid: a2e957145a001ee47b46484df9f7fd25, type: 3}
+  m_Name: BlueShellTurtle_Data
   m_EditorClassIdentifier: 
-  initialGold: 200
-  intialLife: 300
-  waves: {fileID: 4900000, guid: 006f09f5a1ee4e998a35ff13639b3a11, type: 3}
-  levelMusic: {fileID: 8300000, guid: f2b8749ff2cd609498c11057e0c4c8f5, type: 3}
+  id: blue_shell_turtle
+  score: 10
+  maxHealth: 100
+  speed: 5
+  reward: 15

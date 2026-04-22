@@ -5,6 +5,7 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "EnemyData" , menuName = "ScriptableObjet/EnemyData" , order = 0)]
     public class EnemyData : ScriptableObject
     {
+        public string id;
         public int score;
         public int maxHealth;
         public float speed;

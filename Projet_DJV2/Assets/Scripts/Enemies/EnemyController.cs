@@ -20,6 +20,8 @@ namespace Enemies
             set => _target = value;
         }
 
+        public EnemyData EnemyData => enemyData;
+
         private void Awake()
         {
             _mover =  GetComponent<Mover>();

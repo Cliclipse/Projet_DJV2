@@ -38,8 +38,6 @@ namespace Level
         public int health;
     
         private bool _shopState;
-        private EnemyController[] _enemies;
-    
     
         [Header("GameStateMachine")]
         [SerializeField] private Canvas winScreen;
@@ -107,6 +105,16 @@ namespace Level
             AudioSource backgroundMuisc = camObj.GetComponent<AudioSource>();
             backgroundMuisc.clip = level.LevelData.levelMusic;
             backgroundMuisc.Play();
+            
+            // On attend que le level ai chargé les ennemis avant de commencer à les spawn
+            if (level.IsReady)
+            {
+                BeginEnnemiesSpawn();
+            }
+            else
+            {
+                level.OnReady += BeginEnnemiesSpawn;
+            }
         }
     
         /// <summary>
@@ -188,13 +196,18 @@ namespace Level
         /// <returns>Délai entre chaque spawn d'ennemis</returns>
         private IEnumerator StartWave()
         {
-            for (int i = 0; i < 6; i++)
+            EnemyController[] ennemies = level.GetEnnemiesOfWave(0);
+            foreach (var enemyPrefab in ennemies)
             {
-                var enemyPrefab = _enemies[Random.Range(0, _enemies.Length)];
                 var enemy = Instantiate(enemyPrefab, level.SpawnPoint.position, Quaternion.identity, level.SpawnPoint);
                 enemy.Target = level.GetNextPathPoint(null);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(1f);
             }
+        }
+
+        private void BeginEnnemiesSpawn()
+        {
+            StartCoroutine(StartWave());
         }
 
         /// <summary>
@@ -206,15 +219,6 @@ namespace Level
         {
             return level.GetNextPathPoint(pathPoint);
         }
-
-        private IEnumerator Start()
-        {
-            var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Enemy", null);
-            yield return loadHandle;
-            _enemies = loadHandle.Result.Select(go => go.GetComponent<EnemyController>()).ToArray();
-            StartCoroutine(StartWave());
-        }
-
     
         //=========GESTION ETAT PAUSE=========
         //Crée en enlève le listener qui détecte le bouton qui met la fin de la pause
@@ -225,6 +229,5 @@ namespace Level
         {
             _onPause.Invoke();
         }
-    
     }
 }

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2e957145a001ee47b46484df9f7fd25, type: 3}
-  m_Name: EnemyA
+  m_Name: GrayShellTurtle_Data
   m_EditorClassIdentifier: 
+  id: gray_shell_turtle
   score: 10
   maxHealth: 100
   speed: 5

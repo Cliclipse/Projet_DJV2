@@ -7,7 +7,7 @@ namespace ScriptableObjects
     {
         public int initialGold;
         public int intialLife;
-        public WaveData[] waves;
+        public TextAsset waves;
         public AudioClip levelMusic;
     }
 }

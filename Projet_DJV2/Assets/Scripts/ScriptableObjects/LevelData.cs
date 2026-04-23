@@ -8,6 +8,7 @@ namespace ScriptableObjects
         public int initialGold;
         public int intialLife;
         public TextAsset waves;
+        public int waveCount;
         public AudioClip levelMusic;
     }
 }

@@ -52,7 +52,15 @@ namespace Level
         public Canvas LoseScreen => loseScreen;
         public Canvas PauseScreen => pauseScreen;
 
-    
+        /// <summary>
+        /// Numéro de la vague actuelle
+        /// </summary>
+        public int WaveNumber => _waveNumber;
+        
+        /// <summary>
+        /// Nombre de vagues du niveau
+        /// </summary>
+        public int WaveCount => level.LevelData.waveCount;
     
         private UnityEvent _onPause = new();
 
@@ -244,14 +252,26 @@ namespace Level
         {
             gold += enemy.EnemyData.reward;
             _ennemisCount--;
-            if (_ennemisCount <= 0) StartCoroutine(StartWave());
+            if (_ennemisCount <= 0) EndOfWave();
         }
 
         private void HandleEnemyReachCastle(EnemyController enemy)
         {
             health -= enemy.EnemyData.damages;
             _ennemisCount--;
-            if (_ennemisCount <= 0) StartCoroutine(StartWave());
+            if (_ennemisCount <= 0) EndOfWave();
+        }
+
+        /// <summary>
+        /// Gère la fin d'une vague (quand plus aucun ennemi ne reste)
+        /// </summary>
+        private void EndOfWave()
+        {
+            if (_waveNumber == level.LevelData.waveCount)
+            {
+                Debug.Log("Niveau réussi");
+            }
+            else StartCoroutine(StartWave());
         }
     
         //=========GESTION ETAT PAUSE=========

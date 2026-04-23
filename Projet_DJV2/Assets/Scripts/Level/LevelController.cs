@@ -29,8 +29,11 @@ namespace Level
         /// Arène actuelle présente dans la scène
         /// </summary>
         [SerializeField] private Level level;
+        [SerializeField] private float timeBetweenWaves = 10f;
         
         private Camera _mainCamera;
+        private int _ennemisCount;
+        private int _waveNumber;
 
         public BuiltZone builtZoneSelected;
         public int score;
@@ -95,6 +98,8 @@ namespace Level
         
             gold = level.LevelData.initialGold;
             health = level.LevelData.intialLife;
+            _waveNumber = 0;
+            _ennemisCount = 0;
         
             _shopState = false;
             builtZoneSelected = null;
@@ -191,18 +196,21 @@ namespace Level
         }
         
         /// <summary>
-        /// Démarre une vague d'ennemos
+        /// Démarre une vague d'ennemis
         /// </summary>
         /// <returns>Délai entre chaque spawn d'ennemis</returns>
         private IEnumerator StartWave()
         {
-            EnemyController[] ennemies = level.GetEnnemiesOfWave(0);
+            yield return new WaitForSeconds(timeBetweenWaves);
+            _waveNumber++;
+            EnemyController[] ennemies = level.GetEnnemiesOfWave(_waveNumber);
             foreach (var enemyPrefab in ennemies)
             {
                 EnemyController enemy = Instantiate(enemyPrefab, level.SpawnPoint.position, Quaternion.identity, level.SpawnPoint);
                 enemy.AddOnDeathListener(HandleEnemyDeath);
                 enemy.AddOnReachCastleListener(HandleEnemyReachCastle);
                 enemy.Target = level.GetNextPathPoint(null);
+                _ennemisCount++;
                 yield return new WaitForSeconds(1f);
             }
         }
@@ -235,11 +243,15 @@ namespace Level
         private void HandleEnemyDeath(EnemyController enemy)
         {
             gold += enemy.EnemyData.reward;
+            _ennemisCount--;
+            if (_ennemisCount <= 0) StartCoroutine(StartWave());
         }
 
         private void HandleEnemyReachCastle(EnemyController enemy)
         {
             health -= enemy.EnemyData.damages;
+            _ennemisCount--;
+            if (_ennemisCount <= 0) StartCoroutine(StartWave());
         }
     
         //=========GESTION ETAT PAUSE=========

@@ -1,9 +1,9 @@
 {
-  "0": [
+  "1": [
     { "id": "blue_shell_turtle", "count": 10 },
     { "id": "gray_shell_turtle", "count": 5 }
   ],
-  "1": [
+  "2": [
     { "id": "blue_shell_turtle", "count": 15 },
     { "id": "gray_shell_turtle", "count": 10 },
     { "id": "blue_shell_turtle", "count": 5 }

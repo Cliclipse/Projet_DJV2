@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,7 @@ namespace Level
         [SerializeField] private Canvas pauseScreen;
 
         public GameStateMachine GameStateMachine { get; private set; }
-        public Canvas WinScreen => winScreen; //Raccourci Getter
+        public Canvas WinScreen => winScreen;
         public Canvas LoseScreen => loseScreen;
         public Canvas PauseScreen => pauseScreen;
 
@@ -91,16 +92,6 @@ namespace Level
         /// </summary>
         void Awake()
         {
-            // Singleton
-            if (FindObjectOfType<LevelController>() != this)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-        
             GameStateMachine = new GameStateMachine(this);
             GameStateMachine.Initialize(GameStateMachine.PlayState);
         
@@ -129,7 +120,13 @@ namespace Level
                 level.OnReady += BeginEnnemiesSpawn;
             }
         }
-    
+
+        private void Start()
+        {
+            winScreen.gameObject.SetActive(false);
+            loseScreen.gameObject.SetActive(false);
+        }
+
         /// <summary>
         /// Vérifie si le pointeur de la souris survole un élément UI.
         /// </summary>
@@ -259,7 +256,8 @@ namespace Level
         {
             health -= enemy.EnemyData.damages;
             _ennemisCount--;
-            if (_ennemisCount <= 0) EndOfWave();
+            if (health <= 0) GameStateMachine.TransitionTo(GameStateMachine.LoseState);
+            else if (_ennemisCount <= 0) EndOfWave();
         }
 
         /// <summary>
@@ -269,7 +267,7 @@ namespace Level
         {
             if (_waveNumber == level.LevelData.waveCount)
             {
-                Debug.Log("Niveau réussi");
+                GameStateMachine.TransitionTo(GameStateMachine.WinState);
             }
             else StartCoroutine(StartWave());
         }

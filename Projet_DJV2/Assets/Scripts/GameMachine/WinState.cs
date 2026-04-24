@@ -16,8 +16,7 @@ namespace GameMachine
         public void Enter()
         {
             Time.timeScale = 0;
-        
-            //_levelController.WinScreen.gameObject.SetActive(true);
+            _levelController.WinScreen.gameObject.SetActive(true);
         }
 
         public void Execute()

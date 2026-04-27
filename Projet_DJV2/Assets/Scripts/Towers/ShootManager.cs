@@ -86,8 +86,9 @@ namespace Towers
                 { 
                     Debug.Log("Problème dans la scène, l'objet suivant" + hit.gameObject.name+ " est sur le layer ennemy sans posséder d'EnnemyController dans ses parents");
                 }
-                Transform target = ec.Target;
-                float magn =  Vector3.Magnitude(target.transform.position - transform.position);
+                Transform target = ec.gameObject.transform;
+                Debug.Log(target.position);
+                float magn =  Vector3.Magnitude(target.position - transform.position);
                 if (magn < minMagn)
                 {
                     minMagn = magn;
@@ -101,10 +102,7 @@ namespace Towers
                 _hasTarget = true;  
             }
         }
-    
-    
-    
-    
+        
     
         public void SetProjectilsShot(int projectilsShot)
         {

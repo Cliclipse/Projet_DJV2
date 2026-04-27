@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Towers
 {
     public class CrossbowShootManager : ShootManager
@@ -18,6 +20,9 @@ namespace Towers
         void Start()
         {
             _inCooldown = false;
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+            Debug.Log(towerAnimatorManager);
+
         }
 
         // Update is called once per frame

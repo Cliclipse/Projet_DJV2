@@ -18,6 +18,8 @@ namespace Towers
         void Start()
         {
             _inCooldown = false;
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+
         }
 
         // Update is called once per frame

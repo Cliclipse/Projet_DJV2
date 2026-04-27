@@ -13,12 +13,15 @@ namespace Towers
         [SerializeField] private TowerDataLevel towerDataLevel;
         [SerializeField] private InformationPanel informationPanel;
         [SerializeField] private GameObject rangeIndicator;
+        
 
+        
+        
         private TowerData towerData;
         private int level;
 
         private LevelController levelController;
-
+        private TowerAnimatorManager towerAnimatorManager;
 
     
         private ShootManager _shootManager;
@@ -34,6 +37,8 @@ namespace Towers
             levelController = FindFirstObjectByType<LevelController>();
             _shootManager = GetComponent<ShootManager>();
             _audioSource = GetComponent<AudioSource>();
+
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
         
             level = 1;
             towerData = towerDataLevel.towerDatas[0];
@@ -45,6 +50,8 @@ namespace Towers
         
             rangeIndicator.SetActive(false);
             informationPanel.gameObject.SetActive(false);
+            
+            towerAnimatorManager.SetUpdatedState(true);
         }
 
         private void ShooterStatUpdate()

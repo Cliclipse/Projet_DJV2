@@ -8,11 +8,18 @@ namespace Towers
     public  class ShootManager : MonoBehaviour
     {
         [SerializeField] protected AudioSource castSound; 
+        
+        
+        protected TowerAnimatorManager towerAnimatorManager;
+        
+        
         protected int _projectilsShot;
         protected float _shotCooldown;
         protected float _projectilSpeed;
         protected float _projectileDamages;
         protected float _range;
+        
+        protected TowerAnimatorManager _animator;
     
 
         [SerializeField] protected Transform _target; //temporairement en serialize
@@ -54,12 +61,13 @@ namespace Towers
             {
                 if (Vector3.Magnitude(_target.transform.position - transform.position) > _range * _range)// Si l'ennemi est plus dans la range
                 {
-                    Debug.Log("FindNewTarget");
+                    towerAnimatorManager.SetAttackingState(false);
                     FindNewTarget();
                 }
             }
             else
             {
+                towerAnimatorManager.SetAttackingState(false);
                 FindNewTarget();
             }
         }
@@ -80,14 +88,12 @@ namespace Towers
 
             foreach (Collider hit in hits)
             {
-
                 EnemyController ec = hit.GetComponentInParent<EnemyController>();
                 if (ec == null)
                 { 
                     Debug.Log("Problème dans la scène, l'objet suivant" + hit.gameObject.name+ " est sur le layer ennemy sans posséder d'EnnemyController dans ses parents");
                 }
                 Transform target = ec.gameObject.transform;
-                Debug.Log(target.position);
                 float magn =  Vector3.Magnitude(target.position - transform.position);
                 if (magn < minMagn)
                 {
@@ -100,6 +106,8 @@ namespace Towers
             {
                 _target = closest;
                 _hasTarget = true;  
+                towerAnimatorManager.SetAttackingState(true);
+
             }
         }
         
@@ -131,6 +139,9 @@ namespace Towers
             _target = target;
         }
 
-
+        void Start()
+        {
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+        }
     }
 }

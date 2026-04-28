@@ -8,7 +8,7 @@ namespace Enum
         {
             Crossbow,
             Mage,
-            Archer
+            Bow
         }
     }
 }

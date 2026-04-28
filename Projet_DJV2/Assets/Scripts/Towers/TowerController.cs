@@ -1,3 +1,4 @@
+using Enum;
 using Level;
 using ScriptableObjects;
 using UnityEngine;
@@ -13,10 +14,11 @@ namespace Towers
         [SerializeField] private TowerDataLevel towerDataLevel;
         [SerializeField] private InformationPanel informationPanel;
         [SerializeField] private GameObject rangeIndicator;
-        
 
-        
-        
+        public EnumTower.Tower towerTypeEnum;
+
+
+
         private TowerData towerData;
         private int level;
 
@@ -54,6 +56,11 @@ namespace Towers
             towerAnimatorManager.SetUpdatedState(true);
         }
 
+        public TowerData GetTowerData()
+        {
+            return towerData;
+        }
+        
         private void ShooterStatUpdate()
         {
             _shootManager.SetProjectilsShot(towerData.projectilsShot);

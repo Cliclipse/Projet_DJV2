@@ -38,6 +38,7 @@ public class ShopManager : MonoBehaviour
             EnumTower.Tower towerBought = (EnumTower.Tower) towerBoughtNumber;
             builtZoneSelected.Construct(towerBought, _towersHashMap);
             levelController.gold -= cost;
+            CloseShop();
         }
         else
         {
@@ -82,7 +83,9 @@ public class ShopManager : MonoBehaviour
         _towersHashMap = new Dictionary<EnumTower.Tower, TowerController>();
         var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Towers", null);
         yield return loadHandle;
-        _towersHashMap = loadHandle.Result.Select((go, index) => new { Index = (EnumTower.Tower)index, Controller = go.GetComponent<TowerController>() }).ToDictionary(x => x.Index, x => x.Controller);
+        _towersHashMap = loadHandle.Result
+            .Select(gameObject => gameObject.GetComponent<TowerController>())
+            .ToDictionary(tc => tc.towerTypeEnum, tc => tc);
         Debug.Log("Tower HashMap :" +_towersHashMap[0].ToString());
         gameObject.SetActive(false);
     }

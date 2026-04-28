@@ -1,3 +1,4 @@
+using Enum;
 using UnityEngine;
 
 namespace ScriptableObjects

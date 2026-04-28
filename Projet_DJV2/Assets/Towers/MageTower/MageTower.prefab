@@ -21,6 +21,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 265b83b404488cc46a25a94596c8521e, type: 2}
     - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: towerTypeEnum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: rangeIndicator
       value: 
       objectReference: {fileID: 8543520817074716337}

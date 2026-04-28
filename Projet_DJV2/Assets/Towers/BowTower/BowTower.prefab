@@ -100,6 +100,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: towerTypeEnum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: towerDataLevel
       value: 
       objectReference: {fileID: 11400000, guid: de8b81d8f19a19b40b7021c263b5e0f3, type: 2}

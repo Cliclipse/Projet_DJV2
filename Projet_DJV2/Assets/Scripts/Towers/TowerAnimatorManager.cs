@@ -14,7 +14,6 @@ public class TowerAnimatorManager : MonoBehaviour
 
     public void SetDirectionToTarget(Vector3 directionToTarget)
     {
-        Debug.Log(directionToTarget);
         _directionToTarget = directionToTarget;
     }
 

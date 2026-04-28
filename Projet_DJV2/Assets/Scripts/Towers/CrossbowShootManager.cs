@@ -21,8 +21,6 @@ namespace Towers
         {
             _inCooldown = false;
             towerAnimatorManager = GetComponent<TowerAnimatorManager>();
-            Debug.Log(towerAnimatorManager);
-
         }
 
         // Update is called once per frame

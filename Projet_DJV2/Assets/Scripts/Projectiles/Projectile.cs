@@ -16,6 +16,7 @@ namespace Projectiles
         protected float _damage;
     
         protected Transform _target;
+        private Vector3 lastPlaceOfTarget;
         protected Vector3 _direction;
     
         protected bool _targetAlive;
@@ -48,14 +49,19 @@ namespace Projectiles
         {
             _mover.Move(_direction);
             //_mover.Orienting(_direction, this); Fais des trucs étranges
-            if (!_targetAlive && transform.position == _target.position) Destroy(gameObject); //Je détruis le projectile quand il arrive où devait être sa cible
+            if (!_targetAlive && transform.position == lastPlaceOfTarget) Destroy(gameObject); //Je détruis le projectile quand il arrive où devait être sa cible
 
         }
 
         protected void UpdateDirection()
         {
             CheckTargetStillAlive();
-            if (_targetAlive) _direction = (_target.position - transform.position).normalized;
+            if (_targetAlive)
+            {
+                _direction = (_target.position - transform.position).normalized;
+                lastPlaceOfTarget = _target.position;
+            }
+
         }
     
     

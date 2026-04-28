@@ -3,7 +3,30 @@ namespace Towers
     public class BowTowerShootManager : ShootManager
     {
 
-        //A impléemnter, faire en osrte que la fonction boom donne un script au monstre touché qui s'appelle poison s'il en a pas un déjà, et un effet qui s'appelle slow.
-        //Créer une classe effet
+        private void Shoot()
+        {
+            if (_hasTarget && !_inCooldown)
+            {
+                SpawnProjectile();
+                StartCoroutine(ShootingCooldownCoroutine());
+            }
+        }
+    
+    
+    
+        // Start is called before the first frame update
+        void Start()
+        {
+            _inCooldown = false;
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            TargetSelection();
+            Shoot();
+        }
     }
 }

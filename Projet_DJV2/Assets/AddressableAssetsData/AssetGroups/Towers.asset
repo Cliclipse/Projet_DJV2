@@ -17,8 +17,20 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 6a75242156a374f4ca2b89eb9cda688f
   m_SerializeEntries:
+  - m_GUID: 7222b61e89460c9409c3188e1c02135d
+    m_Address: MageTower
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Towers
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74be700b084082c4ca16b1767803c25e
-    m_Address: Assets/Towers/CrossBowTower/CrossBowTower.prefab
+    m_Address: CrossBowTower
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Towers
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1ecd88ed1fc7114b80039278f8f114c
+    m_Address: BowTower
     m_ReadOnly: 0
     m_SerializedLabels:
     - Towers

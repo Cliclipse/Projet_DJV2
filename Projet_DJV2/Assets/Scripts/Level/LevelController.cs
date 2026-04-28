@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemies;
-using Enum;
 using GameMachine;
 using JetBrains.Annotations;
 using ScriptableObjects;
@@ -20,11 +19,8 @@ namespace Level
     /// </summary>
     public class LevelController : MonoBehaviour
     {
-        //implémenter un singleton ensuite puis le fait que ce soit une machine à état entre l'animation de départ,
-        //le menu pause, le jeu avec le shop ouvert ou le shop non ouvert
-        [SerializeField] RectTransform shopPanel;
-        [SerializeField] private TowerData[] towerData; // ce serait mieux de faire un dico mais on peut pas le serializeField et chiant à construire avec l'enum donc flemme
-        //Dcp order : 0: Crossbow , 1: Mage , 2: Archer 
+
+        [SerializeField] ShopManager shopManager;
     
         /// <summary>
         /// Arène actuelle présente dans la scène
@@ -36,13 +32,10 @@ namespace Level
         private int _ennemisCount;
         private int _waveNumber;
 
-        public BuiltZone builtZoneSelected;
         public int score;
         public int gold;
         public int health;
-    
-        private bool _shopState;
-    
+        
         [Header("GameStateMachine")]
         [SerializeField] private Canvas winScreen;
         [SerializeField] private Canvas loseScreen;
@@ -65,28 +58,7 @@ namespace Level
     
         private UnityEvent _onPause = new();
 
-    
-        /// <summary>
-        /// Ferme le shop et réinitialise la zone sélectionnée.
-        /// </summary>
-        public void CloseShop()
-        {
-            shopPanel.gameObject.SetActive(false);
-            builtZoneSelected = null;
-            _shopState = false;
-        }
-    
-        /// <summary>
-        /// Ouvre le shop et associe la zone de construction sélectionnée.
-        /// </summary>
-        /// <param name="builtZone">La zone de construction sur laquelle le joueur a cliqué.</param>
-        public void OpenShop(BuiltZone builtZone)
-        {
-            shopPanel.gameObject.SetActive(true);
-            builtZoneSelected = builtZone;
-            _shopState = true;
-        }
-    
+        
         /// <summary>
         /// Initialise le singleton, la state machine, les ressources du niveau et la caméra.
         /// </summary>
@@ -100,9 +72,7 @@ namespace Level
             _waveNumber = 0;
             _ennemisCount = 0;
         
-            _shopState = false;
-            builtZoneSelected = null;
-            shopPanel.gameObject.SetActive(false);
+
         
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
             _mainCamera = camObj.GetComponent<Camera>();
@@ -160,39 +130,17 @@ namespace Level
 
                     if (!IsPointerOverUI())
                     {
-                        if (clicked == null) CloseShop();
-                        else if (clicked.TryGetComponent<BuiltZone>(out BuiltZone builtZone))
+                        if (clicked == null) shopManager.CloseShop();
+                        else if (clicked.TryGetComponent(out BuiltZone builtZone))
                         {
-                            OpenShop(builtZone);
+                            shopManager.OpenShop(builtZone);
                         }
                     }
                 }
             } 
         }
         
-        /// <summary>
-        /// Tente d'acheter et de construire une tour sur la zone sélectionnée.
-        /// Déduit le coût en or si le joueur en a suffisamment.
-        /// </summary>
-        /// <param name="towerBoughtNumber">
-        /// Index de la tour dans <c>towerData</c>, casté en <see cref="EnumTower.Tower"/>.
-        /// </param>
-        public void TowerBought(int towerBoughtNumber)
-        {
-            int cost = towerData[towerBoughtNumber].cost;
-            if (gold > cost)
-            {
-                Debug.Log("TowerBought");
-                EnumTower.Tower towerBought = (EnumTower.Tower) towerBoughtNumber;
-                builtZoneSelected.Construct(towerBought);
-                gold -= cost;
-            }
-            else
-            {
-                Debug.Log("T'es trop pauvre");
-            }
 
-        }
         
         void Update()
         {

@@ -199,11 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a516da9f9500b7499e154e9257c9cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopPanel: {fileID: 2779655663123838539}
-  towerData: []
+  shopManager: {fileID: 2735750637300697804}
   level: {fileID: 0}
   timeBetweenWaves: 10
-  builtZoneSelected: {fileID: 0}
   score: 0
   gold: 0
   health: 0
@@ -802,6 +800,7 @@ GameObject:
   - component: {fileID: 2779655663123838539}
   - component: {fileID: 6161332713889882886}
   - component: {fileID: 3952449397204342583}
+  - component: {fileID: 2735750637300697804}
   m_Layer: 5
   m_Name: ShopPanel
   m_TagString: Untagged
@@ -868,6 +867,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 5.85
+--- !u!114 &2735750637300697804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656669554302986977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6bc41d093190740acb4ab903821837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerDatas:
+  - {fileID: 11400000, guid: d805b1b07b589664e83fc6e777b3c3be, type: 2}
+  - {fileID: 11400000, guid: 265b83b404488cc46a25a94596c8521e, type: 2}
+  - {fileID: 11400000, guid: f85aae344aacc8c418cb92a71aeebb3d, type: 2}
+  levelController: {fileID: 8333798343730209567}
+  shopPanel: {fileID: 0}
 --- !u!1 &1700705493396223677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,10 +2922,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8333798343730209567}
-        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
-        m_MethodName: test
-        m_Mode: 1
+      - m_Target: {fileID: 2735750637300697804}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: TowerBought
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

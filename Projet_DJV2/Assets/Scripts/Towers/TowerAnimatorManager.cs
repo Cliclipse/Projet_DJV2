@@ -8,7 +8,15 @@ public class TowerAnimatorManager : MonoBehaviour
     //Dead(defeat) > Spawn/Upgrade > Attacking > Idle
     //Ensuite je pense je rajouterai des particules à l'update
     [SerializeField] private Animator animator;
+    [SerializeField] private Transform meshTransform;
     
+    private Vector3 _directionToTarget = Vector3.zero;
+
+    public void SetDirectionToTarget(Vector3 directionToTarget)
+    {
+        Debug.Log(directionToTarget);
+        _directionToTarget = directionToTarget;
+    }
 
     public void SetDeadState(bool isDead)
     {
@@ -31,7 +39,15 @@ public class TowerAnimatorManager : MonoBehaviour
         yield return  new WaitForSeconds(1.09f);
         animator.SetBool("Updated", false);
     }
-    
+
+    void Update()
+    {
+        if (_directionToTarget != Vector3.zero)
+        {
+            meshTransform.rotation = Quaternion.LookRotation(_directionToTarget);
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        }
+    }
     
     
 }

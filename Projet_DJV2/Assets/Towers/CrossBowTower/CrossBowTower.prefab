@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 8335680609560216867}
+    - target: {fileID: 2128284536667158293, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: meshTransform
+      value: 
+      objectReference: {fileID: 7947878151944542611}
     - target: {fileID: 2934060647841438345, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -254,7 +258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castSound: {fileID: 0}
-  towerAnimatorManager: {fileID: 0}
   _target: {fileID: 0}
   projectile: {fileID: 3581924066246127634, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}
 --- !u!114 &8684299997586565097 stripped

@@ -21,6 +21,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 265b83b404488cc46a25a94596c8521e, type: 2}
     - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: rangeIndicator
+      value: 
+      objectReference: {fileID: 8543520817074716337}
+    - target: {fileID: -5066865525733758173, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: towerDataLevel
       value: 
       objectReference: {fileID: 11400000, guid: 60f63214a310df64b845d0762b4a80e5, type: 2}
@@ -48,6 +52,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 3934881252236005888}
+    - target: {fileID: 2128284536667158293, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: meshTransform
+      value: 
+      objectReference: {fileID: 8247101501386229600}
     - target: {fileID: 2934060647841438345, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -226,7 +234,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castSound: {fileID: 3524080954292093327}
-  towerAnimatorManager: {fileID: 0}
   _target: {fileID: 0}
   projectile: {fileID: 2785331766886677160, guid: a1e4f8434f76e8f4b9263d151dcdbe32, type: 3}
 --- !u!114 &2627495422293844443 stripped
@@ -248,6 +255,11 @@ AudioSource:
 --- !u!4 &7329399002619908356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4676459513315804202, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+  m_PrefabInstance: {fileID: 2689034536249742638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8543520817074716337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6035369146358229919, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
   m_PrefabInstance: {fileID: 2689034536249742638}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8500876777160892555

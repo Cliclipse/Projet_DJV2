@@ -31,11 +31,13 @@ namespace Towers
 
         protected void SpawnProjectile()
         {
+            towerAnimatorManager.SetDirectionToTarget(_target.position - transform.position);
             if (castSound != null) castSound.Play();
             Projectile lastProjectile = Instantiate(projectile , transform.position , Quaternion.identity);
             lastProjectile.SetSpeed(_projectilSpeed);
             lastProjectile.SetDamage(_projectileDamages);
             lastProjectile.SetTarget(_target);
+            
         }
     
 

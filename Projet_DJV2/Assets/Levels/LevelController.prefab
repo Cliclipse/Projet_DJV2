@@ -5297,7 +5297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5345,11 +5345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 251
+      value: 252.5
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 217
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5527,7 +5527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 217
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5576,7 +5576,7 @@ PrefabInstance:
     - target: {fileID: 3227181153189982554, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8e8a943d6724e1f4e802153fe73a0fb4, type: 3}
+      objectReference: {fileID: 21300000, guid: 32bd401d3ef6812498f504d92918bbe5, type: 3}
     - target: {fileID: 8179134791820023592, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_Name
       value: ShopButton (2)
@@ -5709,7 +5709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 217
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1419567091239822553, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5758,7 +5758,7 @@ PrefabInstance:
     - target: {fileID: 3227181153189982554, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8e8a943d6724e1f4e802153fe73a0fb4, type: 3}
+      objectReference: {fileID: 21300000, guid: 79286b889d19b8148a7284cd9023fb20, type: 3}
     - target: {fileID: 8179134791820023592, guid: cfc69bc364559a44bae4d82e5f65641a, type: 3}
       propertyPath: m_Name
       value: ShopButton (1)

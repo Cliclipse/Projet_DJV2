@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrossbowBolt Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3964224110550717320, guid: 43940d6f3eff934489f3addd0d962e5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6498499857942061716, guid: 43940d6f3eff934489f3addd0d962e5e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -180,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb1822e1e3b34b45a6bc21d03e0230e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: 2
   mesh: {fileID: 7872423725537186730}
   soundMaker: {fileID: 4498913993610526959, guid: f2f9d759839a62f4985a5f66d1a6bf37, type: 3}
 --- !u!4 &7872423725537186730 stripped

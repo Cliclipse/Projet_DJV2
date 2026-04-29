@@ -12,15 +12,7 @@ namespace Towers
             }
         }
     
-    
-    
-        // Start is called before the first frame update
-        void Start()
-        {
-            _inCooldown = false;
-            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
-
-        }
+        
 
         // Update is called once per frame
         void Update()

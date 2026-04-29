@@ -55,10 +55,9 @@ namespace Projectiles
 
             Collider[] hits = Physics.OverlapSphere(transform.position, explosionRange, LayerMask.GetMask("Enemy"));
             AOE(hits);
-        
-        
-            Destroy(gameObject);
-            //Implémenter l'overlap de l'aoe
+
+            PutBackInPool();
+            //Implémenter l'overlap de l'aoe (je crois c fait)
         }
     }
 }

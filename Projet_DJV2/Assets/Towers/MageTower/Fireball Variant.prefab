@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e3e16bc24b727468a741a744e65850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: 1
   mesh: {fileID: 7872423725537186730}
   soundMaker: {fileID: 7971851440140033032, guid: 9aeea4acc02415e47a4b5695b971e12e, type: 3}
   _explosion: {fileID: 4834804098594039051, guid: afb082e0a6bd45445b9e1538fc0f8efd, type: 3}

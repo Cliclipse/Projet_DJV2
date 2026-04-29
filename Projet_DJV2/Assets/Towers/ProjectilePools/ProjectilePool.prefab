@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0316fddd127f7d04397b74ea103990ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilesPoolSize: 100
+  projectilePrefabModel: {fileID: 0}
+  isPoolReady: 0

@@ -1,8 +1,9 @@
+using UnityEngine;
+
 namespace Towers
 {
     public class MageTowerShootManager : ShootManager
     {
-
         private void Shoot()
         {
             if (_hasTarget && !_inCooldown)
@@ -12,16 +13,7 @@ namespace Towers
             }
         }
     
-    
-    
-        // Start is called before the first frame update
-        void Start()
-        {
-            _inCooldown = false;
-            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
-
-        }
-
+        
         // Update is called once per frame
         void Update()
         {

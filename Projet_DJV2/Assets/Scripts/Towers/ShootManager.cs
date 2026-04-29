@@ -7,8 +7,9 @@ namespace Towers
 {
     public  class ShootManager : MonoBehaviour
     {
-        [SerializeField] protected AudioSource castSound; 
-        
+        [SerializeField] protected AudioSource castSound;
+
+        private MonoProjectilePool _projectilesPool;
         
         protected TowerAnimatorManager towerAnimatorManager;
         
@@ -29,15 +30,22 @@ namespace Towers
 
         [SerializeField] private Projectile projectile;
 
+        
+        void Start()
+        {
+            _inCooldown = false;
+            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+        }
+        
+        
         protected void SpawnProjectile()
         {
             towerAnimatorManager.SetDirectionToTarget(_target.position - transform.position);
             if (castSound != null) castSound.Play();
-            Projectile lastProjectile = Instantiate(projectile , transform.position , Quaternion.identity);
+            Projectile lastProjectile = _projectilesPool.GetAProjectile(transform.position, Quaternion.identity);
             lastProjectile.SetSpeed(_projectilSpeed);
             lastProjectile.SetDamage(_projectileDamages);
             lastProjectile.SetTarget(_target);
-            
         }
     
 
@@ -48,6 +56,7 @@ namespace Towers
             _inCooldown = false;
         }
     
+        
     
         /*
  je vais avoir un prob c'est que si la tour a un transforme en tant que target
@@ -141,9 +150,10 @@ namespace Towers
             _target = target;
         }
 
-        void Start()
+        public void SetProjectilePool(MonoProjectilePool projectilePool)
         {
-            towerAnimatorManager = GetComponent<TowerAnimatorManager>();
+            _projectilesPool = projectilePool;
         }
+        
     }
 }

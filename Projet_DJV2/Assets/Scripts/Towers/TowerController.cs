@@ -17,6 +17,7 @@ namespace Towers
 
         public EnumTower.Tower towerTypeEnum;
 
+        
 
 
         private TowerData towerData;
@@ -54,6 +55,9 @@ namespace Towers
             informationPanel.gameObject.SetActive(false);
             
             towerAnimatorManager.SetUpdatedState(true);
+
+            if (PoolManager.Instance != null)_shootManager.SetProjectilePool(PoolManager.Instance.GetPool(towerTypeEnum));
+            else Debug.LogError("Faut rajouter un poolManager dans la scène");
         }
 
         public TowerData GetTowerData()

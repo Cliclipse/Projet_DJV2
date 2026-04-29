@@ -1,10 +1,12 @@
+using Enum;
 using UnityEngine;
 
 namespace Projectiles
 {
     public abstract class Projectile : MonoBehaviour
     {
-
+        [SerializeField] protected EnumTower.Tower projectileType;
+        
         [SerializeField] private Transform mesh;
         [SerializeField] private SoundMaker soundMaker;
 
@@ -23,6 +25,11 @@ namespace Projectiles
 
 
 
+        protected void PutBackInPool()
+        {
+            PoolManager.Instance.GetPool(projectileType).PutBackAProjectile(this);
+        }
+
         protected void HitSound()
         {
             Instantiate(soundMaker, transform.position, transform.rotation);
@@ -36,7 +43,7 @@ namespace Projectiles
                 health.TakeDamage(_damage);
             }
             HitSound();
-            Destroy(gameObject);
+            PutBackInPool();
         }
 
         //Me faut une fonction pour check que l'ennemi est pas mort d'une autre tour sinon ca va buguer sur le refresh Update

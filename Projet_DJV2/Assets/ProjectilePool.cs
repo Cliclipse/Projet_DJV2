@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Projectiles;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MonoProjectilePool : MonoBehaviour
 {
@@ -14,7 +15,14 @@ public class MonoProjectilePool : MonoBehaviour
 
     public bool isPoolReady; // Sera utile quand on fera une sorte de barre de chargement
     
-    private Projectile[] _projectilesPool;
+    private Projectile[] _projectilesPool; 
+    
+    //========= Unity event pour déclarer qu'il est prêt ==============//
+    private UnityEvent _readyEvent = new();
+    public void AddStateChangedListener(UnityAction listener) => _readyEvent.AddListener(listener);
+    public void RemoveStateChangedListener(UnityAction listener) => _readyEvent.RemoveListener(listener);
+    //================================================================//
+
 
     public Projectile GetAProjectile(Vector3 position, Quaternion rotation)
     {
@@ -27,31 +35,28 @@ public class MonoProjectilePool : MonoBehaviour
             projectileFourni.gameObject.SetActive(true);
             return projectileFourni;
         }
-            Debug.Log("Pool de ce projectile vide, augmentation automatique de la pool pas encore implémentée");
+            //Pool de ce projectile vide, augmentation automatique de la pool pas encore implémentée;
             return null;
     }
     public void PutBackAProjectile(Projectile projectile)
     {
-        if (_projectilesAvailable > 0)
-        {
-            projectile.gameObject.SetActive(false);
-            _projectilesAvailable++;
-
-        }
+        projectile.gameObject.SetActive(false);
+        _projectilesAvailable++;
     }
-
     
     void Start()
     {
+        
         isPoolReady = false;
+        _projectilesPool = new Projectile[projectilesPoolSize];
         for (int i = 0; i < projectilesPoolSize; i++)
         {
-            Instantiate(projectilePrefabModel);
-            projectilePrefabModel.gameObject.SetActive(false);
-            _projectilesPool[i] = projectilePrefabModel;
-
+            Projectile lastProj = Instantiate(projectilePrefabModel , transform);
+            lastProj.gameObject.SetActive(false);
+            _projectilesPool[i] = lastProj;
         }
         _projectilesAvailable = projectilesPoolSize;
         isPoolReady = true;
+        _readyEvent.Invoke();
     }
 }

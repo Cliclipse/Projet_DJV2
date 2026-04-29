@@ -13,7 +13,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private TowerData[] towerDatas; //Dico + opti mais par serializable, 0: Crossbow , 1: Mage , 2: Archer 
     [SerializeField] private LevelController levelController;
     
-    [SerializeField] private StatsIndicatorsManager[] listeStatsIndicatorsManager; 
+    [SerializeField] private ShopButton[] listeShopButtons; 
         
     [SerializeField] RectTransform shopPanel;
     private Dictionary< EnumTower.Tower, TowerController> _towersHashMap;
@@ -73,12 +73,13 @@ public class ShopManager : MonoBehaviour
     
     void Start()
     {
-        if (towerDatas.Length != listeStatsIndicatorsManager.Length) Debug.Log("Il y'a plus de tours dans le shop que d'indicateurs y étant lié");
+        if (towerDatas.Length != listeShopButtons.Length) Debug.Log("Il y'a plus de tours dans le shop que d'indicateurs y étant lié");
         builtZoneSelected = null;
         StartCoroutine(LoadTowersDictionaryCoroutine());
         for (int i = 0; i < towerDatas.Length; i++)
         {
-            listeStatsIndicatorsManager[i].UpdateStats(towerDatas[i].projectileDamages , towerDatas[i].range , towerDatas[i].shotCooldown);
+            listeShopButtons[i].statsIndicatorsManager.UpdateStats(towerDatas[i].projectileDamages , towerDatas[i].range , towerDatas[i].shotCooldown);
+            listeShopButtons[i].goldStatIndicator.UpdateStat(towerDatas[i].cost);
         }
     }
 

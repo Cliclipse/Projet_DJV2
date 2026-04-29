@@ -26,12 +26,14 @@ public class MonoProjectilePool : MonoBehaviour
 
     public Projectile GetAProjectile(Vector3 position, Quaternion rotation)
     {
+        Debug.Log("_projectilesAvailable" + _projectilesAvailable);
         if (_projectilesAvailable > 0)
         {
             _projectilesAvailable--;
             Projectile projectileFourni = _projectilesPool[_projectilesAvailable];
             projectileFourni.transform.position = position;
             projectileFourni.transform.rotation = rotation;
+            projectileFourni.isReturned = false;
             projectileFourni.gameObject.SetActive(true);
             return projectileFourni;
         }

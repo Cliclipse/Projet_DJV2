@@ -11,8 +11,9 @@ using UnityEngine.AddressableAssets;
 public class ShopManager : MonoBehaviour
 {
     [SerializeField] private TowerData[] towerDatas; //Dico + opti mais par serializable, 0: Crossbow , 1: Mage , 2: Archer 
-    
     [SerializeField] private LevelController levelController;
+    
+    [SerializeField] private StatsIndicatorsManager[] listeStatsIndicatorsManager; 
         
     [SerializeField] RectTransform shopPanel;
     private Dictionary< EnumTower.Tower, TowerController> _towersHashMap;
@@ -72,8 +73,13 @@ public class ShopManager : MonoBehaviour
     
     void Start()
     {
+        if (towerDatas.Length != listeStatsIndicatorsManager.Length) Debug.Log("Il y'a plus de tours dans le shop que d'indicateurs y étant lié");
         builtZoneSelected = null;
         StartCoroutine(LoadTowersDictionaryCoroutine());
+        for (int i = 0; i < towerDatas.Length; i++)
+        {
+            listeStatsIndicatorsManager[i].UpdateStats(towerDatas[i].projectileDamages , towerDatas[i].range , towerDatas[i].shotCooldown);
+        }
     }
 
     //Faudrait mettre ça dans le temps de chargement, car là le shop est activé jusqu'à ce que j'ai chargé le diso, je peux pas le charger quand le shop est desactivé

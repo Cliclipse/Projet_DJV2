@@ -23,11 +23,16 @@ namespace Projectiles
     
         protected bool _targetAlive;
 
+        public bool isReturned; //Pour éviter le problème des ennemis superposé qui font retourner plusieurs fois le projectile
 
 
         protected void PutBackInPool()
         {
-            PoolManager.Instance.GetPool(projectileType).PutBackAProjectile(this);
+            if (!isReturned)
+            {
+                isReturned = true;
+                PoolManager.Instance.GetPool(projectileType).PutBackAProjectile(this);
+            }
         }
 
         protected void HitSound()

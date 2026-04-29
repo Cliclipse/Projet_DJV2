@@ -58,7 +58,7 @@ namespace Enemies
         /// </summary>
         private void Update()
         {
-            if (!_target || Vector3.Distance(_target.position, transform.position) <= 0.1f)
+            if (!_target || Vector3.Distance(_target.position, transform.position) <= 7f)
             {
                 if (_levelController.IsLastPathPoint(_target))
                 {

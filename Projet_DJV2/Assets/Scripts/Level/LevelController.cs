@@ -163,8 +163,8 @@ namespace Level
                 enemy.AddOnDeathListener(HandleEnemyDeath);
                 enemy.AddOnReachCastleListener(HandleEnemyReachCastle);
                 enemy.Target = level.GetNextPathPoint(null);
+                Debug.Log(level.GetNextPathPoint(null).position);
                 _ennemisCount++;
-                yield return new WaitForSeconds(1f);
             }
         }
 

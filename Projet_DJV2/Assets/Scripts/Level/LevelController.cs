@@ -19,7 +19,7 @@ namespace Level
     /// </summary>
     public class LevelController : MonoBehaviour
     {
-
+        [SerializeField] private GameSession gameSession;
         [SerializeField] ShopManager shopManager;
     
         /// <summary>

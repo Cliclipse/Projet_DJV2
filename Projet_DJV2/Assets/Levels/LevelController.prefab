@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a516da9f9500b7499e154e9257c9cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSession: {fileID: 11400000, guid: cb0ab13ef2bf2ab8aa08a2fbd8780393, type: 2}
   shopManager: {fileID: 2735750637300697804}
   level: {fileID: 0}
   timeBetweenWaves: 10

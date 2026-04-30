@@ -13,6 +13,7 @@ namespace Projectiles
             _mover.SetSpeed(_speed);
 
             _targetAlive = true;
+            _collisioned = false;
         }
 
         // Update is called once per frame
@@ -21,9 +22,6 @@ namespace Projectiles
             UpdateDirection();
             MoveToTarget();
         }
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Enemy")) Boum();
-        }
+
     }
 }

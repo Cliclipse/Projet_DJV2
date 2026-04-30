@@ -23,17 +23,15 @@ namespace Projectiles
         protected Vector3 _direction;
     
         protected bool _targetAlive;
+        
+        public bool _collisioned;
 
-        public bool isReturned; //Pour éviter le problème des ennemis superposé qui font retourner plusieurs fois le projectile
+
 
 
         protected void PutBackInPool()
         {
-            if (!isReturned)
-            {
-                isReturned = true;
-                PoolManager.Instance.GetPool(projectileType).PutBackAProjectile(this);
-            }
+            PoolManager.Instance.GetPool(projectileType).PutBackAProjectile(this);
         }
 
         protected void HitSound()
@@ -73,6 +71,7 @@ namespace Projectiles
             {
                 _direction = (_target.position - transform.position).normalized;
                 lastPlaceOfTarget = _target.position;
+                mesh.transform.rotation = Quaternion.LookRotation(_direction);
             }
 
         }
@@ -97,6 +96,18 @@ namespace Projectiles
         public float GetDamage()
         {
             return _damage;
+        }
+        
+        void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log("contact");
+            
+            if (collision.gameObject.CompareTag("Enemy") && !_collisioned)
+            {
+                Debug.Log("projectile va péter");
+                _collisioned = true;
+                Boum();
+            }
         }
     
     }

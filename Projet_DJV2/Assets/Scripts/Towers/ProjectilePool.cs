@@ -26,15 +26,14 @@ public class MonoProjectilePool : MonoBehaviour
 
     public Projectile GetAProjectile(Vector3 position, Quaternion rotation)
     {
-        Debug.Log("_projectilesAvailable" + _projectilesAvailable);
         if (_projectilesAvailable > 0)
         {
             _projectilesAvailable--;
             Projectile projectileFourni = _projectilesPool[_projectilesAvailable];
             projectileFourni.transform.position = position;
             projectileFourni.transform.rotation = rotation;
-            projectileFourni.isReturned = false;
             projectileFourni.gameObject.SetActive(true);
+            projectileFourni._collisioned = false;
             return projectileFourni;
         }
             //Pool de ce projectile vide, augmentation automatique de la pool pas encore implémentée;
@@ -42,8 +41,12 @@ public class MonoProjectilePool : MonoBehaviour
     }
     public void PutBackAProjectile(Projectile projectile)
     {
+        Debug.Log("projectile put back");
         projectile.gameObject.SetActive(false);
         _projectilesAvailable++;
+        projectile.transform.position = Vector3.zero;
+        projectile.transform.rotation = Quaternion.identity;
+        
     }
     
     void Start()

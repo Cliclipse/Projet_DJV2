@@ -16,6 +16,8 @@ namespace Projectiles
             _mover.SetSpeed(_speed);
 
             _targetAlive = true;
+            _collisioned = false;
+
         }
 
         // Update is called once per frame

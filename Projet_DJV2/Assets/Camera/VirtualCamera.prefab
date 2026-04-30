@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 2589314691556294564}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -122,13 +122,13 @@ MonoBehaviour:
   zoomSensibility: 3000
   target: {fileID: 5296292952996417739}
   initialPosition: {x: 0, y: 0, z: 0}
-  initialZoom: 55
+  initialZoom: 50
   maxX: 50
   maxZ: 50
   minX: -50
   minZ: -50
-  maxZoom: 90
-  minZoom: 10
+  maxZoom: 60
+  minZoom: 30
 --- !u!1 &6373580640077180314
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 15, z: 0}
+  m_FollowOffset: {x: 0, y: 22, z: 0}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0

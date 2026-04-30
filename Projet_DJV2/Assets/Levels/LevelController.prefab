@@ -53,7 +53,7 @@ MonoBehaviour:
   gameSession: {fileID: 11400000, guid: cb0ab13ef2bf2ab8aa08a2fbd8780393, type: 2}
   shopManager: {fileID: 2735750637300697804}
   level: {fileID: 0}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 1.5
   gold: 0
   health: 0
   winScreen: {fileID: 1653113640389092127}

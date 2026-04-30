@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7973059970653576506, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 8804675558212741965, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.13

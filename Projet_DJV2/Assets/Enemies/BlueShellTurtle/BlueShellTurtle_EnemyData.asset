@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2e957145a001ee47b46484df9f7fd25, type: 3}
-  m_Name: GrayShellTurtle_Data
+  m_Name: BlueShellTurtle_EnemyData
   m_EditorClassIdentifier: 
-  id: gray_shell_turtle
+  id: blue_shell_turtle
   score: 10
-  maxHealth: 100
-  speed: 15
+  maxHealth: 300
+  speed: 1
   angularSpeed: 300
   reward: 15
-  damages: 5
+  damages: 10

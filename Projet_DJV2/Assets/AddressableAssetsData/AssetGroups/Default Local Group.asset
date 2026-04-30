@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Level
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ddfb903c74bb434aea418fcc17074798
+    m_Address: Assets/Enemies/Golem/Golem.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 54b46321713a3b24f9c89e8dcf96213d, type: 2}
   m_SchemaSet:

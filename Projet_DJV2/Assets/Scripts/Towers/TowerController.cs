@@ -101,7 +101,7 @@ namespace Towers
             }
             else if (levelController.gold >= cost)
             {
-                levelController.gold -= towerDataLevel.towerDatas[level + 1].cost;
+                levelController.gold -= towerDataLevel.towerDatas[level].cost;
                 LevelUp();
 
                 Debug.Log("LevelUp de la tour");

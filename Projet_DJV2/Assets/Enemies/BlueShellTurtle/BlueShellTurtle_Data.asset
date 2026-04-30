@@ -15,6 +15,7 @@ MonoBehaviour:
   id: blue_shell_turtle
   score: 10
   maxHealth: 300
-  speed: 5
+  speed: 1
+  angularSpeed: 300
   reward: 15
   damages: 10

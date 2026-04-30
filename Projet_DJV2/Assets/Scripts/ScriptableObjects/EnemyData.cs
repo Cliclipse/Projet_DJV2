@@ -9,6 +9,7 @@ namespace ScriptableObjects
         public int score;
         public int maxHealth;
         public float speed;
+        public float angularSpeed;
         public int reward;
         public int damages;
     }

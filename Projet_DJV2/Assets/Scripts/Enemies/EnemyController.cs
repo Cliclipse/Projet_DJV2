@@ -1,3 +1,4 @@
+using Common;
 using Level;
 using ScriptableObjects;
 using UnityEngine;
@@ -37,6 +38,7 @@ namespace Enemies
             _mover =  GetComponent<Mover>();
             _health = GetComponent<Health>();
             _mover.SetSpeed(enemyData.speed);
+            _mover.SetAngularSpeed(enemyData.angularSpeed);
             
             _health.SetMaxHealth(enemyData.maxHealth);
             _health.SetCurrentHealth(enemyData.maxHealth);

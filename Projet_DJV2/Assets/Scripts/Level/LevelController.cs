@@ -31,6 +31,9 @@ namespace Level
         private Camera _mainCamera;
         private int _ennemisCount;
         private int _waveNumber;
+        
+        // La liste des addressables des levels
+        private Level[] _levels;
 
         public int score;
         public int gold;
@@ -57,7 +60,6 @@ namespace Level
         public int WaveCount => level.LevelData.waveCount;
     
         private UnityEvent _onPause = new();
-
         
         /// <summary>
         /// Initialise le singleton, la state machine, les ressources du niveau et la caméra.
@@ -66,14 +68,27 @@ namespace Level
         {
             GameStateMachine = new GameStateMachine(this);
             GameStateMachine.Initialize(GameStateMachine.PlayState);
-        
+        }
+
+        /// <summary>
+        /// Gère le spawn du level et l'initialisation variables du jeu
+        /// </summary>
+        /// <returns></returns>
+        private IEnumerator Start()
+        {
+            winScreen.gameObject.SetActive(false);
+            loseScreen.gameObject.SetActive(false);
+            
+            var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Level", null);
+            yield return loadHandle;
+            _levels = loadHandle.Result.Select(go => go.GetComponent<Level>()).ToArray();
+            level = Instantiate(_levels[gameSession.levelIndex], Vector3.zero, Quaternion.identity);
+            
             gold = level.LevelData.initialGold;
             health = level.LevelData.intialLife;
             _waveNumber = 0;
             _ennemisCount = 0;
-        
-
-        
+            
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
             _mainCamera = camObj.GetComponent<Camera>();
             AudioSource backgroundMuisc = camObj.GetComponent<AudioSource>();
@@ -89,12 +104,6 @@ namespace Level
             {
                 level.OnReady += BeginEnnemiesSpawn;
             }
-        }
-
-        private void Start()
-        {
-            winScreen.gameObject.SetActive(false);
-            loseScreen.gameObject.SetActive(false);
         }
 
         /// <summary>

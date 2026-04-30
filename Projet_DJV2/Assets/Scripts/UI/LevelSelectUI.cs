@@ -1,5 +1,6 @@
 using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -10,7 +11,7 @@ namespace UI
         public void LoadLevel(int levelIndex)
         {
             gameSession.levelIndex = levelIndex;
-            // Chargement de la scène
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

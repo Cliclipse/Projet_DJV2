@@ -17,6 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 96c5058c228601f46b3add0c55dc3beb
   m_SerializeEntries:
+  - m_GUID: 0106c68f265ae5c00bf9695d81c0be97
+    m_Address: Assets/Enemies/Lich/Lich.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3591f35877e1cea5da78c3180544340e
     m_Address: Assets/Levels/Level2/Level2.prefab
     m_ReadOnly: 0

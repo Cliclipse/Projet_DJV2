@@ -1,11 +1,9 @@
 {
   "1": [
-    { "id": "blue_shell_turtle", "count": 10 },
+    { "id": "lich", "count": 10 },
     { "id": "gray_shell_turtle", "count": 5 }
   ],
   "2": [
-    { "id": "blue_shell_turtle", "count": 15 },
-    { "id": "gray_shell_turtle", "count": 10 },
-    { "id": "blue_shell_turtle", "count": 5 }
+    { "id": "blue_shell_turtle", "count": 1 }
   ]
 }

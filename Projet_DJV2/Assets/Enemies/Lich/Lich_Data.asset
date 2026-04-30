@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2e957145a001ee47b46484df9f7fd25, type: 3}
-  m_Name: BlueShellTurtle_Data
+  m_Name: Lich_Data
   m_EditorClassIdentifier: 
-  id: blue_shell_turtle
+  id: lich
   score: 10
-  maxHealth: 300
+  maxHealth: 100
   speed: 5
   reward: 15
-  damages: 10
+  damages: 5

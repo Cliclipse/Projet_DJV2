@@ -100,11 +100,8 @@ namespace Projectiles
         
         void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("contact");
-            
             if (collision.gameObject.CompareTag("Enemy") && !_collisioned)
             {
-                Debug.Log("projectile va péter");
                 _collisioned = true;
                 Boum();
             }

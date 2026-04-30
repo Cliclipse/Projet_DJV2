@@ -70,8 +70,9 @@ namespace Towers
             //Je peux pas faire un ou car si pas de target, target est false et donc on peut pas le rechercher et je suis obligé de faire ce truc bizarre
             if (_hasTarget)
             {
-                if (Vector3.Magnitude(_target.transform.position - transform.position) > _range * _range)// Si l'ennemi est plus dans la range
+                if (Vector3.SqrMagnitude(_target.transform.position - transform.position) > _range * _range)// Si l'ennemi est plus dans la range
                 {
+                    Debug.Log("Ennemi a quitté la range de la tour");
                     towerAnimatorManager.SetAttackingState(false);
                     FindNewTarget();
                 }

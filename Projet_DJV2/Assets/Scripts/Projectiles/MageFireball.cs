@@ -26,12 +26,7 @@ namespace Projectiles
             UpdateDirection();
             MoveToTarget();
         }
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Enemy")) Boum();
-        }
-
-
+        
         //Je peux pas juste hit tous les ennemis car on va trigger plusieurs colliders de chaque ennemi
 
         private void AOE(Collider[] hits)

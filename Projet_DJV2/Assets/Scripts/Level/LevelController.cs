@@ -94,9 +94,9 @@ namespace Level
             
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
             _mainCamera = camObj.GetComponent<Camera>();
-            AudioSource backgroundMuisc = camObj.GetComponent<AudioSource>();
-            backgroundMuisc.clip = level.LevelData.levelMusic;
-            backgroundMuisc.Play();
+            AudioSource backgroundMusic = camObj.GetComponent<AudioSource>();
+            backgroundMusic.clip = level.LevelData.levelMusic;
+            backgroundMusic.Play();
             
             // On attend que le level ai chargé les ennemis avant de commencer à les spawn
             if (level.IsReady)

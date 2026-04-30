@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 5966134309879497495, guid: b54f1076dc1d446468eb0b35184519ce, type: 3}
       propertyPath: projectilePrefabModel
       value: 
-      objectReference: {fileID: 3581924066246127634, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}
+      objectReference: {fileID: 4186177556107487776, guid: 8051cafabd45b5e4397922c88e02b468, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

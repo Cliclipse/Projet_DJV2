@@ -17,6 +17,6 @@ public class InformationController : MonoBehaviour
     {
         goldTMP.text = levelController.gold.ToString();
         healthTMP.text = levelController.health.ToString();
-        waveTMP.text = $"Wave {levelController.WaveNumber} / {levelController.WaveCount}";
+        //waveTMP.text = $"Wave {levelController.WaveNumber} / {levelController.WaveCount}";
     }
 }

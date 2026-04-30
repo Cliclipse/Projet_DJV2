@@ -33,7 +33,7 @@ public class ShopManager : MonoBehaviour
     public void TowerBought(int towerBoughtNumber)
     {
         int cost = towerDatas[towerBoughtNumber].cost;
-        if (levelController.gold > cost)
+        if (levelController.gold >= cost)
         {
             Debug.Log("TowerBought");
             EnumTower.Tower towerBought = (EnumTower.Tower) towerBoughtNumber;

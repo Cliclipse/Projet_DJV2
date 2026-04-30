@@ -10,21 +10,13 @@ public class InformationController : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI goldTMP;
     [SerializeField] private TextMeshProUGUI healthTMP;
-    [SerializeField] private TextMeshProUGUI scoreTMP;
     [SerializeField] private TextMeshProUGUI waveTMP;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         goldTMP.text = levelController.gold.ToString();
         healthTMP.text = levelController.health.ToString();
-        scoreTMP.text = levelController.score.ToString();
-        waveTMP.text = string.Format("Wave {0} / {1}", levelController.WaveNumber, levelController.WaveCount);
+        waveTMP.text = $"Wave {levelController.WaveNumber} / {levelController.WaveCount}";
     }
 }

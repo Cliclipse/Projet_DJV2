@@ -34,8 +34,9 @@ namespace Level
         
         // La liste des addressables des levels
         private Level[] _levels;
+        private ScoreController _scoreController;
+        public ScoreController ScoreController => _scoreController;
 
-        public int score;
         public int gold;
         public int health;
         
@@ -68,6 +69,7 @@ namespace Level
         {
             GameStateMachine = new GameStateMachine(this);
             GameStateMachine.Initialize(GameStateMachine.PlayState);
+            _scoreController = GetComponent<ScoreController>();
         }
 
         /// <summary>
@@ -206,6 +208,7 @@ namespace Level
         private void HandleEnemyDeath(EnemyController enemy)
         {
             gold += enemy.EnemyData.reward;
+            _scoreController?.KillEnemy(enemy.EnemyData);
             _ennemisCount--;
             if (_ennemisCount <= 0) EndOfWave();
         }
@@ -213,6 +216,7 @@ namespace Level
         private void HandleEnemyReachCastle(EnemyController enemy)
         {
             health -= enemy.EnemyData.damages;
+            _scoreController?.EnemyReachCastle(enemy.EnemyData);
             _ennemisCount--;
             if (health <= 0) GameStateMachine.TransitionTo(GameStateMachine.LoseState);
             else if (_ennemisCount <= 0) EndOfWave();

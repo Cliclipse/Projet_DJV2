@@ -12,7 +12,6 @@ public class BuiltZone : MonoBehaviour
     public void Construct(EnumTower.Tower towerType , Dictionary< EnumTower.Tower, TowerController> towersHashMap)
     {
         Instantiate( towersHashMap[towerType], transform.position, Quaternion.identity);
-        Debug.Log("Instantiate tower");
         Destroy(gameObject);
     }
 }

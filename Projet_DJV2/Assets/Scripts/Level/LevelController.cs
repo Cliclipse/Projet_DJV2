@@ -134,19 +134,19 @@ namespace Level
         {
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log("Clic Détecté");
                 var ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
+                    Debug.Log("Raycast Collision");
                     Transform clicked = hit.collider.gameObject.transform.parent;
 
                     if (!IsPointerOverUI())
                     {
-                        if (clicked == null) shopManager.CloseShop();
-                        else if (clicked.TryGetComponent(out BuiltZone builtZone))
-                        {
-                            shopManager.OpenShop(builtZone);
-                        }
+                        if (clicked == null)shopManager.CloseShop();
+                        else if (clicked.TryGetComponent(out BuiltZone builtZone))shopManager.OpenShop(builtZone);
+                        else shopManager.CloseShop();
                     }
                 }
             } 

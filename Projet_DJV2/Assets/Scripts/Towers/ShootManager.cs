@@ -43,6 +43,7 @@ namespace Towers
             towerAnimatorManager.SetDirectionToTarget(_target.position - transform.position);
             if (castSound != null) castSound.Play();
             Projectile lastProjectile = _projectilesPool.GetAProjectile(transform.position, Quaternion.identity);
+            if (lastProjectile == null) Debug.Log("Déclenchement du bug mystère des pools rip");
             lastProjectile.SetSpeed(_projectilSpeed);
             lastProjectile.SetDamage(_projectileDamages);
             lastProjectile.SetTarget(_target);
@@ -72,7 +73,6 @@ namespace Towers
             {
                 if (Vector3.SqrMagnitude(_target.transform.position - transform.position) > _range * _range)// Si l'ennemi est plus dans la range
                 {
-                    Debug.Log("Ennemi a quitté la range de la tour");
                     towerAnimatorManager.SetAttackingState(false);
                     FindNewTarget();
                 }

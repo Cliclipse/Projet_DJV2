@@ -35,7 +35,6 @@ public class ShopManager : MonoBehaviour
         int cost = towerDatas[towerBoughtNumber].cost;
         if (levelController.gold >= cost)
         {
-            Debug.Log("TowerBought");
             EnumTower.Tower towerBought = (EnumTower.Tower) towerBoughtNumber;
             builtZoneSelected.Construct(towerBought, _towersHashMap);
             levelController.gold -= cost;
@@ -86,14 +85,12 @@ public class ShopManager : MonoBehaviour
     //Faudrait mettre ça dans le temps de chargement, car là le shop est activé jusqu'à ce que j'ai chargé le diso, je peux pas le charger quand le shop est desactivé
     private IEnumerator LoadTowersDictionaryCoroutine()
     {        
-        Debug.Log("InitialisationHashMap :");
         _towersHashMap = new Dictionary<EnumTower.Tower, TowerController>();
         var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Towers", null);
         yield return loadHandle;
         _towersHashMap = loadHandle.Result
             .Select(gameObject => gameObject.GetComponent<TowerController>())
             .ToDictionary(tc => tc.towerTypeEnum, tc => tc);
-        Debug.Log("Tower HashMap :" +_towersHashMap[0].ToString());
         gameObject.SetActive(false);
     }
 }

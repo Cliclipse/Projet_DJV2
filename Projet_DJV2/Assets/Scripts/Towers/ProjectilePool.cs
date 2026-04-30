@@ -41,7 +41,6 @@ public class MonoProjectilePool : MonoBehaviour
     }
     public void PutBackAProjectile(Projectile projectile)
     {
-        Debug.Log("projectile put back");
         projectile.gameObject.SetActive(false);
         _projectilesAvailable++;
         projectile.transform.position = Vector3.zero;

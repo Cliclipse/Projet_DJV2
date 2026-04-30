@@ -53,6 +53,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Enemy
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d17cffdb8c6f1189e8ee663d07d1ddba
+    m_Address: Assets/Enemies/Dog/Dog.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ddfb903c74bb434aea418fcc17074798
     m_Address: Assets/Enemies/Golem/Golem.prefab
     m_ReadOnly: 0

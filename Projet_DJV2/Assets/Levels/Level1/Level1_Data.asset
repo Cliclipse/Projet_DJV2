@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level1_Data
   m_EditorClassIdentifier: 
   levelIndex: 1
-  initialGold: 500
+  initialGold: 700
   intialLife: 300
   waves: {fileID: 4900000, guid: 006f09f5a1ee4e998a35ff13639b3a11, type: 3}
   waveCount: 10

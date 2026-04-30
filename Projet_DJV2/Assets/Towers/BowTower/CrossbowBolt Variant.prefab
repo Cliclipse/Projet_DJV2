@@ -1423,6 +1423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: 2
-  mesh: {fileID: 0}
+  mesh: {fileID: 5983525186088704587}
   soundMaker: {fileID: 4498913993610526959, guid: f2f9d759839a62f4985a5f66d1a6bf37, type: 3}
   _collisioned: 0

@@ -57,6 +57,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3934881252236005888}
     - target: {fileID: 2128284536667158293, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
+      propertyPath: spawnEffect
+      value: 
+      objectReference: {fileID: 7226888052703040405, guid: 7ec363c8df426644ea85f8d6d570561c, type: 3}
+    - target: {fileID: 2128284536667158293, guid: a4c0696dbe3ee694c87796681b30bad1, type: 3}
       propertyPath: meshTransform
       value: 
       objectReference: {fileID: 8247101501386229600}

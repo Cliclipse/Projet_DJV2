@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CartoonFX;
 using UnityEngine;
 
 public class TowerAnimatorManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class TowerAnimatorManager : MonoBehaviour
     //Ensuite je pense je rajouterai des particules à l'update
     [SerializeField] private Animator animator;
     [SerializeField] private Transform meshTransform;
+    [SerializeField] private CFXR_Effect updateEffect;
     
     private Vector3 _directionToTarget = Vector3.zero;
 
@@ -35,8 +37,11 @@ public class TowerAnimatorManager : MonoBehaviour
 
     private IEnumerator UpdateCoroutine()
     {
+        CFXR_Effect effect = Instantiate(updateEffect, transform.position , transform.rotation);
+        effect.transform.localScale = transform.localScale;
         yield return  new WaitForSeconds(1.09f);
         animator.SetBool("Updated", false);
+        //Destroy(effect); Je crois ils se détruisent d'eux-même
     }
 
     void Update()

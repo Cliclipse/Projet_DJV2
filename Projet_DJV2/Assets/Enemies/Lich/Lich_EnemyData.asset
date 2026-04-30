@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: lich
   score: 10
-  maxHealth: 160
+  maxHealth: 150
   speed: 1.6
   angularSpeed: 300
   reward: 30

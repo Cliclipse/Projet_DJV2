@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Ogre_EnemyData
   m_EditorClassIdentifier: 
   id: ogre
-  score: 10
+  score: 230
   maxHealth: 300
-  speed: 1
+  speed: 1.5
   angularSpeed: 300
-  reward: 15
-  damages: 10
+  reward: 30
+  damages: 40

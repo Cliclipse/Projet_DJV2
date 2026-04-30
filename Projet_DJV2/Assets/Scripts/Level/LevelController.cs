@@ -177,6 +177,7 @@ namespace Level
                 enemy.Target = level.GetNextPathPoint(null);
                 Debug.Log(level.GetNextPathPoint(null).position);
                 _ennemisCount++;
+                yield return new WaitForSeconds(1.5f);
             }
         }
 

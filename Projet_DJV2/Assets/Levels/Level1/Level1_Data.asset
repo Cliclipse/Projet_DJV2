@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level1_Data
   m_EditorClassIdentifier: 
   levelIndex: 1
-  initialGold: 1500
+  initialGold: 500
   intialLife: 300
   waves: {fileID: 4900000, guid: 006f09f5a1ee4e998a35ff13639b3a11, type: 3}
-  waveCount: 2
+  waveCount: 10
   levelMusic: {fileID: 8300000, guid: f2b8749ff2cd609498c11057e0c4c8f5, type: 3}

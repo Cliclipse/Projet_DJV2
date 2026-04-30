@@ -24,7 +24,7 @@ namespace UI
 
         public void GoToMainMenu()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }

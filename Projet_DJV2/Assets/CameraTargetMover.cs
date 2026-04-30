@@ -26,7 +26,7 @@ public class CameraTargetMover : MonoBehaviour
     void Update()
     {
         target.transform.position += speed * Time.deltaTime * new Vector3( Input.GetAxis("Horizontal") , 0, Input.GetAxis("Vertical")).normalized;
-        _virtualCamera.m_Lens.FieldOfView += zoomSensibility * Time.deltaTime * Input.GetAxis("Mouse ScrollWheel");
+        _virtualCamera.m_Lens.FieldOfView += zoomSensibility * Time.deltaTime * Input.GetAxis("Mouse ScrollWheel") * -1;
 
         float positionX = Mathf.Clamp(target.transform.position.x, minX, maxX);
         float positionZ = Mathf.Clamp(target.transform.position.z, minZ, maxZ); //Clamp fait comme si je foustais dans la fonction min et max à la suite pour que àa dépasse pas

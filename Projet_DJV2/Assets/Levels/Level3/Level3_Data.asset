@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc4385e096652b44b452d2a478043fa, type: 3}
-  m_Name: Level2_Data
+  m_Name: Level3_Data
   m_EditorClassIdentifier: 
-  levelIndex: 2
-  initialGold: 500
-  intialLife: 300
-  waves: {fileID: 4900000, guid: 81b7636f419d9f636b78f896db2de73b, type: 3}
-  waveCount: 10
+  levelIndex: 3
+  initialGold: 2000
+  intialLife: 200
+  waves: {fileID: 4900000, guid: a8c2bcd92e68ee7ad9e7882c8d3c3183, type: 3}
+  waveCount: 2
   levelMusic: {fileID: 8300000, guid: f2b8749ff2cd609498c11057e0c4c8f5, type: 3}

@@ -1,11 +1,37 @@
 {
   "1": [
-    { "id": "blue_shell_turtle", "count": 10 },
-    { "id": "gray_shell_turtle", "count": 5 }
+    { "id": "lich", "count": 4 }
   ],
   "2": [
-    { "id": "blue_shell_turtle", "count": 15 },
-    { "id": "gray_shell_turtle", "count": 10 },
-    { "id": "blue_shell_turtle", "count": 5 }
+    { "id": "lich", "count": 8 }
+  ],
+  "3": [
+    { "id": "gray_shell_turtle", "count": 3 }
+  ],
+  "4": [
+    { "id": "lich", "count": 10 },
+    { "id": "gray_shell_turtle", "count": 2 }
+  ],
+  "5": [
+    { "id": "dog", "count": 4 }
+  ],
+  "6": [
+    { "id": "gray_shell_turtle", "count": 5 },
+    { "id": "dog", "count": 2 }
+  ],
+  "7": [
+    { "id": "ogre", "count": 2 }
+  ],
+  "8": [
+    { "id": "lich", "count": 15 },
+    { "id": "ogre", "count": 3 }
+  ],
+  "9": [
+    { "id": "dog", "count": 6 },
+    { "id": "ogre", "count": 3 },
+    { "id": "blue_shell_turtle", "count": 2 }
+  ],
+  "10": [
+    { "id": "golem", "count": 1 }
   ]
 }

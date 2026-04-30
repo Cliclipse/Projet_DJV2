@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: golem
   score: 500
-  maxHealth: 1200
+  maxHealth: 1300
   speed: 1
   angularSpeed: 100
-  reward: 150
+  reward: 175
   damages: 200

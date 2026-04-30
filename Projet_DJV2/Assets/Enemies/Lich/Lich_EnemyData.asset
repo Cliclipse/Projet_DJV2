@@ -15,7 +15,7 @@ MonoBehaviour:
   id: lich
   score: 10
   maxHealth: 150
-  speed: 1.6
+  speed: 1.75
   angularSpeed: 300
   reward: 30
   damages: 7

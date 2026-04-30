@@ -15,7 +15,7 @@ MonoBehaviour:
   id: dog
   score: 10
   maxHealth: 400
-  speed: 1
+  speed: 4
   angularSpeed: 300
-  reward: 45
+  reward: 75
   damages: 10

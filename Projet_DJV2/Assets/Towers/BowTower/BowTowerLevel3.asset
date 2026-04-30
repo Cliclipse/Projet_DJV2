@@ -16,7 +16,7 @@ MonoBehaviour:
   cost: 500
   projectilsShot: 1
   shotCooldown: 1.5
-  projectilSpeed: 1.6
+  projectilSpeed: 0.4
   projectileDamages: 16
   range: 20
   hasEffect: 1

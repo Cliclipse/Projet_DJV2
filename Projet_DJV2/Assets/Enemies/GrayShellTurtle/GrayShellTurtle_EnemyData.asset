@@ -15,7 +15,7 @@ MonoBehaviour:
   id: gray_shell_turtle
   score: 10
   maxHealth: 70
-  speed: 2.5
+  speed: 7
   angularSpeed: 300
   reward: 35
   damages: 5

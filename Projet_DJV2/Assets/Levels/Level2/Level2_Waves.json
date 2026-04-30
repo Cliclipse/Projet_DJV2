@@ -28,13 +28,13 @@
   ],
   "8": [
     { "id": "lich", "count": 5 },
-    { "id": "gray_shell_turtle", "count": 3 },
+    { "id": "dog", "count": 3 },
     { "id": "ogre", "count": 2 },
-    { "id": "gray_shell_turtle", "count": 3 },
+    { "id": "dog", "count": 3 },
     { "id": "ogre", "count": 2 }
   ],
   "9": [
-    { "id": "dog", "count": 6 },
+    { "id": "dog", "count": 8 },
     { "id": "ogre", "count": 3 },
     { "id": "blue_shell_turtle", "count": 2 }
   ],
@@ -50,7 +50,7 @@
     { "id": "gray_shell_turtle", "count": 15 }
   ],
   "13": [
-    { "id": "dog", "count": 10 }
+    { "id": "dog", "count": 12 }
   ],
   "14": [
     { "id": "golem", "count": 2 },
@@ -64,6 +64,7 @@
     { "id": "gray_shell_turtle", "count": 15 },
     { "id": "golem", "count": 1 },
     { "id": "lich", "count": 20 },
+    { "id": "dog", "count": 5 },
     { "id": "golem", "count": 1 },
     { "id": "dog", "count": 4 },
     { "id": "lich", "count": 10 },
@@ -71,6 +72,7 @@
     { "id": "gray_shell_turtle", "count": 5 },
     { "id": "golem", "count": 1 },
     { "id": "gray_shell_turtle", "count": 5 },
+    { "id": "dog", "count": 15 },
     { "id": "golem", "count": 1 },
     { "id": "gray_shell_turtle", "count": 5 },
     { "id": "golem", "count": 3 }

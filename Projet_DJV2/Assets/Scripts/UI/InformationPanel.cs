@@ -35,11 +35,11 @@ public class InformationPanel : MonoBehaviour
         else
         {
             statsLevelUpIndicatorsManager.UpdateStats(nextTowerData.projectileDamages , nextTowerData.shotCooldown ,  nextTowerData.range);
-            costLevelUpReference.stat = towerData.cost ;
+            costLevelUpReference.stat = nextTowerData.cost ;
         }
         
         levelReference.text = "Level : " + towerData.level; 
-        costLevelUpReference.stat = towerData.cost;
+        costLevelUpReference.stat = nextTowerData.cost;
 
         if (towerData.hasEffect)
         {

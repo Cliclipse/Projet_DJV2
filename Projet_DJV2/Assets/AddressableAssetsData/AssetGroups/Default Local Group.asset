@@ -17,6 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 96c5058c228601f46b3add0c55dc3beb
   m_SerializeEntries:
+  - m_GUID: 3591f35877e1cea5da78c3180544340e
+    m_Address: Assets/Levels/Level2/Level2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4adcd1b88f4646ee7ab639055dd2f16c
     m_Address: Assets/Enemies/GrayShellTurtle/GrayShellTurtle_Prefab.prefab
     m_ReadOnly: 0

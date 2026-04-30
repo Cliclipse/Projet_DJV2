@@ -82,7 +82,8 @@ namespace Level
             var loadHandle = Addressables.LoadAssetsAsync<GameObject>("Level", null);
             yield return loadHandle;
             _levels = loadHandle.Result.Select(go => go.GetComponent<Level>()).ToArray();
-            level = Instantiate(_levels[gameSession.levelIndex], Vector3.zero, Quaternion.identity);
+            var levelPrefab = _levels.First(l => l.LevelData.levelIndex == gameSession.levelIndex);
+            level = Instantiate(levelPrefab, Vector3.zero, Quaternion.identity);
             
             gold = level.LevelData.initialGold;
             health = level.LevelData.intialLife;

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: blue_shell_turtle
   score: 10
-  maxHealth: 600
-  speed: 1.5
+  maxHealth: 150
+  speed: 3.5
   angularSpeed: 300
   reward: 100
   damages: 75

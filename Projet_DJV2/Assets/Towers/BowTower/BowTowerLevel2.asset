@@ -18,7 +18,7 @@ MonoBehaviour:
   shotCooldown: 1.65
   projectilSpeed: 1.6
   projectileDamages: 16
-  range: 27
+  range: 18
   hasEffect: 1
   castSound: {fileID: 0}
   HasSlow: 1

@@ -17,5 +17,5 @@ MonoBehaviour:
   maxHealth: 70
   speed: 2.5
   angularSpeed: 300
-  reward: 15
+  reward: 35
   damages: 5

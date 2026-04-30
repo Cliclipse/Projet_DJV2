@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: ogre
   score: 230
-  maxHealth: 300
+  maxHealth: 550
   speed: 1.5
   angularSpeed: 300
-  reward: 30
+  reward: 75
   damages: 40

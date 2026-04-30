@@ -24,7 +24,7 @@ MonoBehaviour:
     - Towers
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74be700b084082c4ca16b1767803c25e
-    m_Address: CrossBowTower
+    m_Address: Assets/Towers/CrossBowTower/CrossBowTower.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Towers

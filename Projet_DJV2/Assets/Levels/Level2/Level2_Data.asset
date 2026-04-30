@@ -16,5 +16,5 @@ MonoBehaviour:
   initialGold: 700
   intialLife: 300
   waves: {fileID: 4900000, guid: 81b7636f419d9f636b78f896db2de73b, type: 3}
-  waveCount: 10
+  waveCount: 15
   levelMusic: {fileID: 8300000, guid: dc7cdd19def8cf847b2947d4ac93f2fd, type: 3}

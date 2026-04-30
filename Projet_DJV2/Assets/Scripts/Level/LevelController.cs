@@ -61,7 +61,8 @@ namespace Level
         public int WaveCount => level.LevelData.waveCount;
     
         private UnityEvent _onPause = new();
-        
+
+        public bool levelLoaded;
         /// <summary>
         /// Initialise le singleton, la state machine, les ressources du niveau et la caméra.
         /// </summary>
@@ -86,6 +87,7 @@ namespace Level
             _levels = loadHandle.Result.Select(go => go.GetComponent<Level>()).ToArray();
             var levelPrefab = _levels.First(l => l.LevelData.levelIndex == gameSession.levelIndex);
             level = Instantiate(levelPrefab, Vector3.zero, Quaternion.identity);
+            levelLoaded = true;
             
             gold = level.LevelData.initialGold;
             health = level.LevelData.intialLife;
@@ -134,12 +136,10 @@ namespace Level
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Clic Détecté");
                 var ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.Log("Raycast Collision");
                     Transform clicked = hit.collider.gameObject.transform.parent;
 
                     if (!IsPointerOverUI())

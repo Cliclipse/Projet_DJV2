@@ -21,6 +21,18 @@ PrefabInstance:
       value: GrayShellTurtle_Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 1796076343457683436, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796076343457683436, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796076343457683436, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1796076343457683436, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -59,6 +71,26 @@ PrefabInstance:
     - target: {fileID: 1796076343457683436, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858617671094263837, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858617671094263837, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858617671094263837, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858617671094263837, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858617671094263837, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8804675558212741965, guid: 4ece7ef735ed5990bbe28a62db001a51, type: 3}
       propertyPath: m_LocalPosition.y
